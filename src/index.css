@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  /* Core Palette */
+  --color-bg: #F5F5F0;
+  --color-bg-white: #FFFFFF;
+  --color-surface: #EEEDEA;
+  --color-surface-2: #E8E8E3;
+
+  /* Accent — Lime Green (DeliveryApp signature) */
+  --color-primary: #4F7942;
+  --color-primary-hover: #4F7942;
+  --color-primary-light: #CCFAE8;
+  --color-primary-pale: #E8FBF2;
+
+  /* Text */
+  --color-ink: #002A25;
+  --color-ink-80: rgba(0, 42, 37, 0.80);
+  --color-ink-50: rgba(0, 42, 37, 0.50);
+  --color-ink-30: rgba(0, 42, 37, 0.30);
+
+  /* Stats accent */
+  --color-yellow-pale: #FEFBB0;
+  --color-blue-pale: #C8E9FF;
+
+  /* Typography */
+  --font-main: 'Outfit', sans-serif;
+
+  /* Border Radius — pill-friendly */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 42, 37, 0.06);
+  --shadow-md: 0 8px 32px rgba(0, 42, 37, 0.10);
+  --shadow-lg: 0 20px 60px rgba(0, 42, 37, 0.14);
+  --shadow-green: 0 8px 32px rgba(0, 215, 117, 0.30);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 0.18s var(--ease-out);
+  --t-med: 0.35s var(--ease-out);
+  --t-slow: 0.6s var(--ease-out);
+}
+
+/* ============================================
+   BASE RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-ink);
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow-green);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-ink);
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-ink);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CARDS / BENTO
+   ============================================ */
+.card {
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-green {
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: transform var(--t-med);
+}
+
+.card-green:hover {
+  transform: translateY(-4px);
+}
+
+.card-pale {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 2px solid var(--color-surface-2);
+  transition: transform var(--t-med), border-color var(--t-fast);
+}
+
+.card-pale:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+/* ============================================
+   SCROLL-REVEAL ANIMATION SYSTEM
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.from-left {
+  transform: translateX(-40px);
+}
+
+.reveal.from-right {
+  transform: translateX(40px);
+}
+
+.reveal.scale-in {
+  transform: scale(0.92);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+.delay-1 {
+  transition-delay: 0.08s;
+}
+
+.delay-2 {
+  transition-delay: 0.16s;
+}
+
+.delay-3 {
+  transition-delay: 0.24s;
+}
+
+.delay-4 {
+  transition-delay: 0.32s;
+}
+
+.delay-5 {
+  transition-delay: 0.40s;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.section-sm {
+  padding: 4rem 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-primary-light);
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+}
+
+/* Large stat numbers */
+.stat-number {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: var(--color-ink);
+}
+
+/* Fade-in from top for hero items */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim {
+  animation: heroFadeUp 0.75s var(--ease-out) backwards;
+}
+
+.hero-anim.d1 {
+  animation-delay: 0.05s;
+}
+
+.hero-anim.d2 {
+  animation-delay: 0.18s;
+}
+
+.hero-anim.d3 {
+  animation-delay: 0.30s;
+}
+
+.hero-anim.d4 {
+  animation-delay: 0.42s;
+}
+
+/* Float animation for decorative elements */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Pulse ring on primary button */
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 215, 117, 0.45);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(0, 215, 117, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 215, 117, 0);
+  }
+}
+
+.btn-pulse {
+  animation: pulseRing 2.4s ease-out infinite;
+}
+
+/* Scroll indicator bounce */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* Number count-up shimmer */
+@keyframes shimmer {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
