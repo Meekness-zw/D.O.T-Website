@@ -215,6 +215,15 @@ function App() {
                   <button className="btn-outline">Learn More</button>
                 </div>
 
+                <div className="cta-buttons hero-anim d4" style={{ marginTop: '1.75rem', justifyContent: 'flex-start' }}>
+                  <button className="btn-cta-light">
+                    <IconApple /> Download for iOS
+                  </button>
+                  <button className="btn-cta-outline">
+                    <IconAndroid /> Download for Android
+                  </button>
+                </div>
+
                 <div className="hero-social-proof hero-anim d4">
                   <div className="proof-avatars">
                     {['A', 'B', 'C', 'D'].map((l, i) => (
@@ -422,14 +431,6 @@ function App() {
               <p className="cta-subtitle reveal delay-1">
                 Download the app for free and join 50,000+ happy customers who've already made the switch.
               </p>
-              <div className="cta-buttons reveal delay-2">
-                <button className="btn-cta-light">
-                  <IconApple /> Download for iOS
-                </button>
-                <button className="btn-cta-outline">
-                  <IconAndroid /> Download for Android
-                </button>
-              </div>
             </div>
           </div>
         </section>

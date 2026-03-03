@@ -866,6 +866,19 @@ nav {
   transform: translateY(-2px);
 }
 
+/* Make hero download Android button more visible on light background */
+.hero-section .btn-cta-outline {
+  color: var(--color-ink);
+  border-color: var(--color-ink-50);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .btn-cta-outline:hover {
+  background-color: var(--color-ink);
+  color: #ffffff;
+  border-color: var(--color-ink);
+}
+
 /* ============================================
    FOOTER
    ============================================ */
