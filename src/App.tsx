@@ -215,7 +215,7 @@ function App() {
                   <button className="btn-outline">Learn More</button>
                 </div>
 
-                <div className="cta-buttons hero-anim d4" style={{ marginTop: '1.75rem', justifyContent: 'flex-start' }}>
+                <div className="hero-downloads hero-anim d4">
                   <button className="btn-cta-light">
                     <IconApple /> Download for iOS
                   </button>

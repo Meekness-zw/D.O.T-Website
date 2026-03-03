@@ -254,6 +254,20 @@ nav {
   align-items: center;
 }
 
+.hero-downloads {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+
+.hero-downloads .btn-cta-light,
+.hero-downloads .btn-cta-outline {
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+}
+
 .hero-social-proof {
   display: flex;
   align-items: center;
@@ -973,6 +987,10 @@ footer {
     justify-content: center;
   }
 
+  .hero-downloads {
+    justify-content: center;
+  }
+
   .hero-social-proof {
     justify-content: center;
   }
@@ -1096,5 +1114,11 @@ footer {
 
   .hero-eyebrow {
     font-size: 0.72rem;
+  }
+
+  .hero-downloads .btn-cta-light,
+  .hero-downloads .btn-cta-outline {
+    width: 100%;
+    justify-content: center;
   }
 }
