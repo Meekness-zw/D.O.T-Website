@@ -4,27 +4,27 @@
    DESIGN TOKENS
    ============================================ */
 :root {
-  /* Core Palette */
-  --color-bg: #F5F5F0;
-  --color-bg-white: #FFFFFF;
-  --color-surface: #EEEDEA;
-  --color-surface-2: #E8E8E3;
+  /* Core Palette — dot. dark theme */
+  --color-bg: #0D0D0D;
+  --color-bg-white: #161616;
+  --color-surface: #1E1E1E;
+  --color-surface-2: #2A2A2A;
 
-  /* Accent — Lime Green (DeliveryApp signature) */
-  --color-primary: #4F7942;
-  --color-primary-hover: #4F7942;
-  --color-primary-light: #CCFAE8;
-  --color-primary-pale: #E8FBF2;
+  /* Accent — dot. Orange */
+  --color-primary: #F5A623;
+  --color-primary-hover: #E8941A;
+  --color-primary-light: rgba(245, 166, 35, 0.15);
+  --color-primary-pale: rgba(245, 166, 35, 0.08);
 
   /* Text */
-  --color-ink: #002A25;
-  --color-ink-80: rgba(0, 42, 37, 0.80);
-  --color-ink-50: rgba(0, 42, 37, 0.50);
-  --color-ink-30: rgba(0, 42, 37, 0.30);
+  --color-ink: #FFFFFF;
+  --color-ink-80: rgba(255, 255, 255, 0.80);
+  --color-ink-50: rgba(255, 255, 255, 0.50);
+  --color-ink-30: rgba(255, 255, 255, 0.25);
 
   /* Stats accent */
-  --color-yellow-pale: #FEFBB0;
-  --color-blue-pale: #C8E9FF;
+  --color-yellow-pale: #1F1800;
+  --color-blue-pale: #0A1520;
 
   /* Typography */
   --font-main: 'Outfit', sans-serif;
@@ -37,10 +37,10 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 42, 37, 0.06);
-  --shadow-md: 0 8px 32px rgba(0, 42, 37, 0.10);
-  --shadow-lg: 0 20px 60px rgba(0, 42, 37, 0.14);
-  --shadow-green: 0 8px 32px rgba(0, 215, 117, 0.30);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.50);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.60);
+  --shadow-orange: 0 8px 32px rgba(245, 166, 35, 0.35);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -101,7 +101,7 @@ select {
   justify-content: center;
   gap: 0.5rem;
   background-color: var(--color-primary);
-  color: var(--color-ink);
+  color: #000000;
   padding: 0.85rem 1.75rem;
   font-size: 0.95rem;
   font-weight: 700;
@@ -115,7 +115,7 @@ select {
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-2px) scale(1.03);
-  box-shadow: var(--shadow-green);
+  box-shadow: var(--shadow-orange);
 }
 
 .btn-primary:active {
@@ -132,15 +132,16 @@ select {
   padding: 0.85rem 1.75rem;
   font-size: 0.95rem;
   font-weight: 600;
-  border: 2px solid var(--color-ink);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: background-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
+  transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
 }
 
 .btn-outline:hover {
-  background-color: var(--color-ink);
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
@@ -264,7 +265,7 @@ select {
 
 /* Large stat numbers */
 .stat-number {
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
@@ -329,15 +330,15 @@ select {
 /* Pulse ring on primary button */
 @keyframes pulseRing {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 215, 117, 0.45);
+    box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.50);
   }
 
   70% {
-    box-shadow: 0 0 0 14px rgba(0, 215, 117, 0);
+    box-shadow: 0 0 0 14px rgba(245, 166, 35, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 215, 117, 0);
+    box-shadow: 0 0 0 0 rgba(245, 166, 35, 0);
   }
 }
 

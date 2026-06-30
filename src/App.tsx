@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 // ─── SVG Icon Components ──────────────────────────────────────────────────────
@@ -112,6 +112,14 @@ const IconLive = ({ size = 8 }: { size?: number }) => (
   </svg>
 );
 
+// ─── Logo Component ───────────────────────────────────────────────────────────
+const LogoMark = ({ size = 36, style }: { size?: number; style?: React.CSSProperties }) => (
+  <div className="logo-mark" style={{ height: size, ...style }}>
+    <span className="logo-mark-text">dot</span>
+    <span className="logo-mark-dot" />
+  </div>
+);
+
 // ─────────────────────────────────────────────────────────────────────────────
 
 function App() {
@@ -163,9 +171,9 @@ function App() {
     <div className="app-container">
       {/* ── HEADER ─────────────────────────────────────── */}
       <header ref={headerRef} className={mobileNavOpen ? 'nav-open' : ''}>
-        <div className="logo">
-          DELIVERY<span className="logo-accent">ON</span>TIME
-        </div>
+        <a href="#" className="logo-img-wrap" aria-label="dot. – Delivery on Time">
+          <img src="/dot-on-time-white.png" alt="dot. Delivery on Time" className="nav-logo-img" />
+        </a>
         <button
           type="button"
           className="mobile-menu-toggle"
@@ -180,6 +188,7 @@ function App() {
           <a href="#features" className="nav-link" onClick={() => setMobileNavOpen(false)}>Features</a>
           <a href="#how" className="nav-link" onClick={() => setMobileNavOpen(false)}>How It Works</a>
           <a href="#roles" className="nav-link" onClick={() => setMobileNavOpen(false)}>Join Us</a>
+          <a href="https://merchant.deliveryontime.org" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={() => setMobileNavOpen(false)}>Merchant Portal</a>
           <button className="btn-primary nav-cta" onClick={() => setMobileNavOpen(false)}>Get The App</button>
         </nav>
       </header>
@@ -273,25 +282,25 @@ function App() {
                 <p className="stat-desc">of brands that adopted rapid delivery saw stronger customer LTV</p>
               </div>
               <div className="bento-cell bento-blue reveal scale-in delay-3">
-                <div className="stat-number">22<span style={{ fontSize: '2rem', fontWeight: 700 }}>min</span></div>
+                <div className="stat-number">22<span style={{ fontSize: '1.5rem', fontWeight: 700 }}>min</span></div>
                 <p className="stat-desc">average delivery time across our courier network</p>
               </div>
               <div className="bento-cell bento-wide reveal">
                 <div>
-                  <div className="stat-number" style={{ fontSize: '3.5rem' }}>50K+</div>
-                  <p className="stat-desc" style={{ maxWidth: '260px' }}>Happy customers served. Growing 40% month-over-month.</p>
+                  <div className="stat-number" style={{ fontSize: '3rem' }}>50K+</div>
+                  <p className="stat-desc" style={{ maxWidth: '220px' }}>Happy customers served. Growing 40% month-over-month.</p>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', flex: 1, maxWidth: '300px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1, maxWidth: '280px' }}>
                   {[
                     { label: 'On-time delivery rate', pct: 97, color: 'var(--color-primary)' },
                     { label: 'Customer satisfaction', pct: 94, color: '#6ECDFF' },
-                    { label: 'Courier reliability', pct: 99, color: '#FFE168' },
+                    { label: 'Courier reliability', pct: 99, color: '#FFB347' },
                   ].map(s => (
                     <div key={s.label}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.3rem', color: 'var(--color-ink)' }}>
-                        <span>{s.label}</span><span>{s.pct}%</span>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', fontWeight: 600, marginBottom: '0.25rem', color: 'var(--color-ink-80)' }}>
+                        <span>{s.label}</span><span style={{ color: s.color }}>{s.pct}%</span>
                       </div>
-                      <div style={{ height: '8px', background: 'var(--color-surface)', borderRadius: '9999px', overflow: 'hidden' }}>
+                      <div style={{ height: '6px', background: 'rgba(255,255,255,0.08)', borderRadius: '9999px', overflow: 'hidden' }}>
                         <div style={{ height: '100%', width: `${s.pct}%`, background: s.color, borderRadius: '9999px' }} />
                       </div>
                     </div>
@@ -358,13 +367,56 @@ function App() {
           </div>
         </section>
 
+        {/* ── APP SCREENSHOTS ─────────────────────────────── */}
+        <section className="screenshots-section">
+          <div className="container">
+            <div style={{ textAlign: 'center' }}>
+              <span className="section-tag">The App</span>
+              <h2 className="section-title reveal">Built for Every Role</h2>
+              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>A seamless experience across every interface — customer, courier, and merchant.</p>
+            </div>
+            <div className="screenshots-grid">
+              <div className="screenshot-card reveal delay-1">
+                <div className="screenshot-img-wrap">
+                  <span className="screenshot-badge">Customer</span>
+                  <img src="/screen_customer.png" alt="Customer live tracking screen" className="screenshot-img" />
+                </div>
+                <div className="screenshot-info">
+                  <h3 className="screenshot-title">Live Order Tracking</h3>
+                  <p className="screenshot-desc">Watch your courier in real-time from pickup to your doorstep.</p>
+                </div>
+              </div>
+              <div className="screenshot-card reveal delay-2">
+                <div className="screenshot-img-wrap">
+                  <span className="screenshot-badge">Courier</span>
+                  <img src="/screen_courier.png" alt="Courier order offer screen" className="screenshot-img" />
+                </div>
+                <div className="screenshot-info">
+                  <h3 className="screenshot-title">Order Offers & Earnings</h3>
+                  <p className="screenshot-desc">Accept deliveries, track earnings, and manage your schedule on the go.</p>
+                </div>
+              </div>
+              <div className="screenshot-card reveal delay-3">
+                <div className="screenshot-img-wrap">
+                  <span className="screenshot-badge">Merchant</span>
+                  <img src="/screen_merchant.png" alt="Merchant performance dashboard" className="screenshot-img" />
+                </div>
+                <div className="screenshot-info">
+                  <h3 className="screenshot-title">Merchant Dashboard</h3>
+                  <p className="screenshot-desc">Real-time analytics, orders, and performance — all in one place.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── ROLES / JOIN US ────────────────────────────── */}
         <section id="roles" className="roles-section">
           <div className="container">
             <div style={{ textAlign: 'center' }}>
               <span className="section-tag">Join Us</span>
               <h2 className="section-title reveal">A Platform Built For Everyone</h2>
-              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>Whatever your role, DeliveryOnTime works for you.</p>
+              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>Whatever your role, dot. works for you.</p>
             </div>
 
             <div className="roles-grid">
@@ -409,10 +461,12 @@ function App() {
                   <IconStore size={28} />
                 </div>
                 <h3 className="role-title">Merchants</h3>
-                <p className="role-desc">Reach more customers and grow your revenue. Plug into our delivery network in under 24 hours.</p>
-                <button className="btn-outline" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}>
-                  List Your Store <IconArrowRight />
-                </button>
+                <p className="role-desc">Reach more customers and grow your revenue. Access your full merchant dashboard online.</p>
+                <a href="https://merchant.deliveryontime.org" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
+                  <button className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                    Open Merchant Dashboard <IconArrowRight />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -441,9 +495,11 @@ function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="logo" style={{ color: '#fff', marginBottom: '0.75rem' }}>
-                DELIVERY<span className="logo-accent">ON</span>TIME
-              </div>
+              <img
+                src="/dot-on-time-white.png"
+                alt="dot. Delivery on Time"
+                className="footer-logo-img"
+              />
               <p className="footer-tagline">
                 The fastest, most reliable delivery platform built for everyone — customers, couriers, and merchants.
               </p>
