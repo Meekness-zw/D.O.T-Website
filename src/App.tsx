@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 // ─── SVG Icon Components ──────────────────────────────────────────────────────
@@ -112,13 +112,6 @@ const IconLive = ({ size = 8 }: { size?: number }) => (
   </svg>
 );
 
-// ─── Logo Component ───────────────────────────────────────────────────────────
-const LogoMark = ({ size = 36, style }: { size?: number; style?: React.CSSProperties }) => (
-  <div className="logo-mark" style={{ height: size, ...style }}>
-    <span className="logo-mark-text">dot</span>
-    <span className="logo-mark-dot" />
-  </div>
-);
 
 // ─────────────────────────────────────────────────────────────────────────────
 
