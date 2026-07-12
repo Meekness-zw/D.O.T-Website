@@ -111,6 +111,14 @@ const IconLive = ({ size = 8 }: { size?: number }) => (
     <circle cx="4" cy="4" r="4" fill="currentColor" />
   </svg>
 );
+const IconCalendar = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+  </svg>
+);
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -210,7 +218,26 @@ function App() {
 
             <div className="hero-buttons hero-anim d4">
               <button className="btn-primary btn-pulse">Order Now <IconArrowRight /></button>
+              <button className="btn-demo"><IconCalendar size={18} /> Book a Demo</button>
               <button className="btn-outline">Learn More</button>
+            </div>
+
+            {/* Stat cards — mobile only (desktop cards live in hero-right) */}
+            <div className="hero-stats-mobile hero-anim d4">
+              <div className="hero-stat-card">
+                <span className="hero-stat-icon"><IconClock size={20} /></span>
+                <div>
+                  <div className="hero-stat-value">22 min</div>
+                  <div className="hero-stat-label">avg delivery</div>
+                </div>
+              </div>
+              <div className="hero-stat-card">
+                <span className="hero-stat-icon star"><IconStar size={20} /></span>
+                <div>
+                  <div className="hero-stat-value">4.9</div>
+                  <div className="hero-stat-label">Customer rating</div>
+                </div>
+              </div>
             </div>
 
             <div className="hero-store-badges hero-anim d4">

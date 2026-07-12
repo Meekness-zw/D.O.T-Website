@@ -127,21 +127,46 @@ select {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--color-ink);
   padding: 0.85rem 1.75rem;
   font-size: 0.95rem;
   font-weight: 600;
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  font-family: inherit;
 }
 
 .btn-outline:hover {
   background-color: rgba(255, 255, 255, 0.08);
   border-color: var(--color-primary);
   color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: #1C1C1C;
+  color: var(--color-ink);
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1.5px solid rgba(255, 255, 255, 0.20);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background-color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-demo:hover {
+  background-color: #242424;
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
 }
 
