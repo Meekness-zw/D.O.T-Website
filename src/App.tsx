@@ -181,7 +181,8 @@ function App() {
           <a href="#features" className="nav-link" onClick={() => setMobileNavOpen(false)}>Features</a>
           <a href="#how" className="nav-link" onClick={() => setMobileNavOpen(false)}>How It Works</a>
           <a href="#roles" className="nav-link" onClick={() => setMobileNavOpen(false)}>Join Us</a>
-          <a href="https://merchant.deliveryontime.org" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={() => setMobileNavOpen(false)}>Merchant Portal</a>
+          <a href="https://merchant.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={() => setMobileNavOpen(false)}>Merchant Portal</a>
+          <button className="btn-login" onClick={() => setMobileNavOpen(false)}>Log In</button>
           <button className="btn-primary nav-cta" onClick={() => setMobileNavOpen(false)}>Get The App</button>
         </nav>
       </header>
@@ -189,124 +190,94 @@ function App() {
       <main>
         {/* ── HERO ───────────────────────────────────────── */}
         <section className="hero-section">
-          <div className="hero-orb hero-orb-1" />
-          <div className="hero-orb hero-orb-2" />
-          <div className="container">
-            <div className="hero-inner">
-              {/* Left text */}
-              <div className="hero-text">
-                <div className="hero-eyebrow hero-anim d1">
-                  <span className="hero-eyebrow-dot"><IconLive /></span>
-                  Now Available Nationwide
+          {/* Left content */}
+          <div className="hero-left">
+            <div className="hero-eyebrow hero-anim d1">
+              <span className="hero-eyebrow-dot" />
+              Now Available Nationwide
+            </div>
+
+            <h1 className="hero-title hero-anim d2">
+              Delivery That{' '}
+              <span className="highlight">Never</span>{' '}
+              Misses A Beat.
+            </h1>
+
+            <p className="hero-subtitle hero-anim d3">
+              Join the ecosystem built for precision. Whether you're ordering,
+              delivering, or selling — experience reliability with zero compromises.
+            </p>
+
+            <div className="hero-buttons hero-anim d4">
+              <button className="btn-primary btn-pulse">Order Now <IconArrowRight /></button>
+              <button className="btn-outline">Learn More</button>
+            </div>
+
+            <div className="hero-store-badges hero-anim d4">
+              <a href="#" className="store-badge">
+                <IconApple size={22} />
+                <div className="store-badge-text">
+                  <span className="store-badge-sub">Download on the</span>
+                  <span className="store-badge-name">App Store</span>
                 </div>
-
-                <h1 className="hero-title hero-anim d2">
-                  Delivery That{' '}
-                  <span className="highlight">Never</span>{' '}
-                  Misses A Beat.
-                </h1>
-
-                <p className="hero-subtitle hero-anim d3">
-                  Join the ecosystem built for precision. Whether you're ordering, delivering, or selling — experience reliability with zero compromises.
-                </p>
-
-                <div className="hero-buttons hero-anim d4">
-                  <button className="btn-primary btn-pulse">
-                    Order Now <IconArrowRight />
-                  </button>
-                  <button className="btn-outline">Learn More</button>
+              </a>
+              <a href="#" className="store-badge">
+                <IconAndroid size={22} />
+                <div className="store-badge-text">
+                  <span className="store-badge-sub">GET IT ON</span>
+                  <span className="store-badge-name">Google Play</span>
                 </div>
+              </a>
+            </div>
 
-                <div className="hero-downloads hero-anim d4">
-                  <button className="btn-cta-light">
-                    <IconApple /> Download for iOS
-                  </button>
-                  <button className="btn-cta-outline">
-                    <IconAndroid /> Download for Android
-                  </button>
-                </div>
+            <div className="hero-payments hero-anim d4">
+              <span className="payment-chip visa">VISA</span>
+              <span className="payment-chip mastercard">
+                <span className="mc-circle mc-red" />
+                <span className="mc-circle mc-yellow" />
+              </span>
+              <span className="payment-chip ecocash">EcoCash</span>
+              <span className="payment-chip innbucks">Innbucks</span>
+              <span className="payment-chip mukuru">mukuru</span>
+              <span className="payment-chip paypal">Pay<span style={{color:'#009cde'}}>Pal</span></span>
+            </div>
 
-                <div className="hero-social-proof hero-anim d4">
-                  <div className="proof-avatars">
-                    {['A', 'B', 'C', 'D'].map((l, i) => (
-                      <div className="proof-avatar" key={i}>{l}</div>
-                    ))}
-                  </div>
-                  <p className="proof-text">
-                    Trusted by <strong>50,000+</strong> users across the country
-                  </p>
-                </div>
-              </div>
-
-              {/* Right: 3D illustration */}
-              <div className="hero-visual">
-                <div className="hero-illus-wrap">
-                  {/* Floating stat badges */}
-                  <div className="floating-badge badge-top-right">
-                    <span className="badge-icon-wrap"><IconZap size={14} /></span>
-                    22 min avg delivery
-                  </div>
-                  <div className="floating-badge badge-bottom-left">
-                    <span className="badge-icon-wrap star"><IconStar size={14} /></span>
-                    4.9 rating
-                  </div>
-
-                  <img
-                    src="/hero_scooter.png"
-                    alt="Delivery scooter 3D illustration"
-                    className="hero-3d-img float"
-                  />
-                </div>
-              </div>
+            <div className="hero-cashless hero-anim d4">
+              <IconShield size={16} />
+              <span>100% Cashless. Secure. Seamless.</span>
             </div>
           </div>
-        </section>
 
-        {/* ── STATS / BENTO ──────────────────────────────── */}
-        <section className="stats-section">
-          <div className="container">
-            <div className="bento-grid">
-              <div className="bento-cell bento-green reveal scale-in delay-1">
-                <div className="stat-number">40%</div>
-                <p className="stat-desc">of consumers abandon checkout when same-day delivery isn't available</p>
-              </div>
-              <div className="bento-cell bento-yellow reveal scale-in delay-2">
-                <div className="stat-number">80%</div>
-                <p className="stat-desc">of brands that adopted rapid delivery saw stronger customer LTV</p>
-              </div>
-              <div className="bento-cell bento-blue reveal scale-in delay-3">
-                <div className="stat-number">22<span style={{ fontSize: '1.5rem', fontWeight: 700 }}>min</span></div>
-                <p className="stat-desc">average delivery time across our courier network</p>
-              </div>
-              <div className="bento-cell bento-wide reveal">
+          {/* Right: hero image + floating stat cards */}
+          <div className="hero-right">
+            <div className="hero-img-fade" />
+            <img src="/Hero.jpeg" alt="dot. delivery" className="hero-bg-img" />
+            <div className="hero-stat-cards">
+              <div className="hero-stat-card hero-anim d2">
+                <span className="hero-stat-icon"><IconClock size={20} /></span>
                 <div>
-                  <div className="stat-number" style={{ fontSize: '3rem' }}>50K+</div>
-                  <p className="stat-desc" style={{ maxWidth: '220px' }}>Happy customers served. Growing 40% month-over-month.</p>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1, maxWidth: '280px' }}>
-                  {[
-                    { label: 'On-time delivery rate', pct: 97, color: 'var(--color-primary)' },
-                    { label: 'Customer satisfaction', pct: 94, color: '#6ECDFF' },
-                    { label: 'Courier reliability', pct: 99, color: '#FFB347' },
-                  ].map(s => (
-                    <div key={s.label}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', fontWeight: 600, marginBottom: '0.25rem', color: 'var(--color-ink-80)' }}>
-                        <span>{s.label}</span><span style={{ color: s.color }}>{s.pct}%</span>
-                      </div>
-                      <div style={{ height: '6px', background: 'rgba(255,255,255,0.08)', borderRadius: '9999px', overflow: 'hidden' }}>
-                        <div style={{ height: '100%', width: `${s.pct}%`, background: s.color, borderRadius: '9999px' }} />
-                      </div>
-                    </div>
-                  ))}
+                  <div className="hero-stat-value">22 min</div>
+                  <div className="hero-stat-label">avg delivery</div>
                 </div>
               </div>
-              <div className="bento-cell bento-tall reveal from-right">
-                <div className="stat-number">77%</div>
-                <p className="stat-desc">of our merchants reported improved net-new sales within 30 days</p>
+              <div className="hero-stat-card hero-anim d3">
+                <span className="hero-stat-icon"><IconShield size={20} /></span>
+                <div>
+                  <div className="hero-stat-value">Reliable</div>
+                  <div className="hero-stat-label">Every time</div>
+                </div>
+              </div>
+              <div className="hero-stat-card hero-anim d4">
+                <span className="hero-stat-icon star"><IconStar size={20} /></span>
+                <div>
+                  <div className="hero-stat-value">4.9</div>
+                  <div className="hero-stat-label">Customer rating</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* ── FEATURES ───────────────────────────────────── */}
         <section id="features" className="features-section">
@@ -360,48 +331,7 @@ function App() {
           </div>
         </section>
 
-        {/* ── APP SCREENSHOTS ─────────────────────────────── */}
-        <section className="screenshots-section">
-          <div className="container">
-            <div style={{ textAlign: 'center' }}>
-              <span className="section-tag">The App</span>
-              <h2 className="section-title reveal">Built for Every Role</h2>
-              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>A seamless experience across every interface — customer, courier, and merchant.</p>
-            </div>
-            <div className="screenshots-grid">
-              <div className="screenshot-card reveal delay-1">
-                <div className="screenshot-img-wrap">
-                  <span className="screenshot-badge">Customer</span>
-                  <img src="/screen_customer.png" alt="Customer live tracking screen" className="screenshot-img" />
-                </div>
-                <div className="screenshot-info">
-                  <h3 className="screenshot-title">Live Order Tracking</h3>
-                  <p className="screenshot-desc">Watch your courier in real-time from pickup to your doorstep.</p>
-                </div>
-              </div>
-              <div className="screenshot-card reveal delay-2">
-                <div className="screenshot-img-wrap">
-                  <span className="screenshot-badge">Courier</span>
-                  <img src="/screen_courier.png" alt="Courier order offer screen" className="screenshot-img" />
-                </div>
-                <div className="screenshot-info">
-                  <h3 className="screenshot-title">Order Offers & Earnings</h3>
-                  <p className="screenshot-desc">Accept deliveries, track earnings, and manage your schedule on the go.</p>
-                </div>
-              </div>
-              <div className="screenshot-card reveal delay-3">
-                <div className="screenshot-img-wrap">
-                  <span className="screenshot-badge">Merchant</span>
-                  <img src="/screen_merchant.png" alt="Merchant performance dashboard" className="screenshot-img" />
-                </div>
-                <div className="screenshot-info">
-                  <h3 className="screenshot-title">Merchant Dashboard</h3>
-                  <p className="screenshot-desc">Real-time analytics, orders, and performance — all in one place.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* ── ROLES / JOIN US ────────────────────────────── */}
         <section id="roles" className="roles-section">
@@ -415,6 +345,9 @@ function App() {
             <div className="roles-grid">
               {/* Customer */}
               <div className="role-card customer reveal delay-1">
+                <div className="role-illus-center">
+                  <img src="/customer.png" alt="Customer illustration" className="role-illus" />
+                </div>
                 <div className="role-icon-wrap">
                   <IconShoppingCart size={28} />
                 </div>
@@ -448,14 +381,14 @@ function App() {
               {/* Merchant — with 3D illustration */}
               <div className="role-card merchant reveal delay-3">
                 <div className="role-illus-center">
-                  <img src="/merchant.png" alt="Merchant store 3D illustration" className="role-illus" />
+                  <img src="/merchant-new.png" alt="Merchant dashboard" className="role-illus" />
                 </div>
                 <div className="role-icon-wrap">
                   <IconStore size={28} />
                 </div>
                 <h3 className="role-title">Merchants</h3>
                 <p className="role-desc">Reach more customers and grow your revenue. Access your full merchant dashboard online.</p>
-                <a href="https://merchant.deliveryontime.org" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
+                <a href="https://merchant.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
                   <button className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                     Open Merchant Dashboard <IconArrowRight />
                   </button>
