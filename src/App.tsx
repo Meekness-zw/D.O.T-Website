@@ -111,14 +111,6 @@ const IconLive = ({ size = 8 }: { size?: number }) => (
     <circle cx="4" cy="4" r="4" fill="currentColor" />
   </svg>
 );
-const IconCalendar = ({ size = 18 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-    <line x1="16" y1="2" x2="16" y2="6" />
-    <line x1="8" y1="2" x2="8" y2="6" />
-    <line x1="3" y1="10" x2="21" y2="10" />
-  </svg>
-);
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -202,7 +194,7 @@ function App() {
           <div className="hero-left">
             <div className="hero-eyebrow hero-anim d1">
               <span className="hero-eyebrow-dot" />
-              Now Available Nationwide
+              Coming in August
             </div>
 
             <h1 className="hero-title hero-anim d2">
@@ -217,9 +209,8 @@ function App() {
             </p>
 
             <div className="hero-buttons hero-anim d4">
-              <button className="btn-primary btn-pulse">Order Now <IconArrowRight /></button>
-              <button className="btn-demo"><IconCalendar size={18} /> Book a Demo</button>
-              <button className="btn-outline">Learn More</button>
+              <a href="#how" className="btn-primary btn-pulse">Order Now <IconArrowRight /></a>
+              <a href="#features" className="btn-outline">Learn More</a>
             </div>
 
             {/* Stat cards — mobile only (desktop cards live in hero-right) */}
@@ -240,7 +231,7 @@ function App() {
               </div>
             </div>
 
-            <div className="hero-store-badges hero-anim d4">
+            <div id="download" className="hero-store-badges hero-anim d4">
               <a href="#" className="store-badge">
                 <IconApple size={22} />
                 <div className="store-badge-text">

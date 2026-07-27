@@ -106,7 +106,7 @@ select {
   font-size: 0.95rem;
   font-weight: 700;
   border: none;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
   white-space: nowrap;
@@ -133,7 +133,7 @@ select {
   font-size: 0.95rem;
   font-weight: 600;
   border: 1.5px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
   font-family: inherit;
@@ -146,29 +146,6 @@ select {
   transform: translateY(-2px);
 }
 
-.btn-demo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  background-color: #1C1C1C;
-  color: var(--color-ink);
-  padding: 0.85rem 1.75rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 1.5px solid rgba(255, 255, 255, 0.20);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  transition: background-color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
-  white-space: nowrap;
-  font-family: inherit;
-}
-
-.btn-demo:hover {
-  background-color: #242424;
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
-}
 
 /* ============================================
    CARDS / BENTO

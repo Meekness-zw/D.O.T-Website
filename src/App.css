@@ -212,8 +212,8 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-ink-80);
-  background-color: rgba(30, 30, 30, 0.90);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background-color: transparent;
+  border: none;
   padding: 0.45rem 1.1rem;
   border-radius: var(--radius-pill);
   width: fit-content;
@@ -479,7 +479,7 @@ nav {
   background: transparent;
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   padding: 0.7rem 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1391,28 +1391,22 @@ footer {
     flex-wrap: nowrap;
   }
 
-  /* Primary CTA — amber, full width, tall */
+  /* Order Now — amber, full width, tall */
   .hero-buttons .btn-primary {
     padding: 0.95rem 1.5rem;
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.01em;
+    text-decoration: none;
   }
 
-  /* Book a Demo — dark solid, icon left */
-  .hero-buttons .btn-demo {
-    padding: 0.9rem 1.5rem;
-    background-color: #1A1A1A;
-    border-color: rgba(255, 255, 255, 0.15);
-    font-size: 0.95rem;
-  }
-
-  /* Learn More — solid dark (not transparent — invisible on dark hero bg) */
+  /* Learn More — solid dark so it's visible against the dark hero */
   .hero-buttons .btn-outline {
     padding: 0.9rem 1.5rem;
     background-color: #111111;
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.22);
     font-size: 0.95rem;
+    text-decoration: none;
   }
 
   /* Stat cards — 2-col grid, below buttons */
