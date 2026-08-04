@@ -391,9 +391,11 @@ function App() {
                 </div>
                 <h3 className="role-title">Couriers</h3>
                 <p className="role-desc">Earn on your own schedule. Set your hours, choose your zone, and get paid fast for every delivery.</p>
-                <button className="btn-outline" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}>
-                  Become a Courier <IconArrowRight />
-                </button>
+                <a href="https://couriers.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
+                  <button className="btn-outline" style={{ width: '100%', justifyContent: 'center' }}>
+                    Become a Courier <IconArrowRight />
+                  </button>
+                </a>
               </div>
 
               {/* Merchant — with 3D illustration */}
