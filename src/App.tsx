@@ -118,6 +118,7 @@ const IconLive = ({ size = 8 }: { size?: number }) => (
 function App() {
   const headerRef = useRef<HTMLElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -182,7 +183,72 @@ function App() {
           <a href="#how" className="nav-link" onClick={() => setMobileNavOpen(false)}>How It Works</a>
           <a href="#roles" className="nav-link" onClick={() => setMobileNavOpen(false)}>Join Us</a>
           <a href="https://merchant.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={() => setMobileNavOpen(false)}>Merchant Portal</a>
-          <button className="btn-login" onClick={() => setMobileNavOpen(false)}>Log In</button>
+          <div style={{ position: 'relative' }}>
+              <button
+                className="btn-login"
+                onClick={() => setLoginOpen((o) => !o)}
+                aria-expanded={loginOpen}
+              >
+                Log In
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" style={{ marginLeft: '0.35rem', transition: 'transform 0.15s', transform: loginOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              {loginOpen && (
+                <>
+                  <div
+                    onClick={() => setLoginOpen(false)}
+                    style={{ position: 'fixed', inset: 0, zIndex: 149 }}
+                  />
+                  <div style={{
+                    position: 'absolute', top: 'calc(100% + 10px)', right: 0,
+                    background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.10)',
+                    borderRadius: '12px', padding: '0.5rem', minWidth: '200px',
+                    boxShadow: '0 16px 40px rgba(0,0,0,0.5)', zIndex: 150,
+                  }}>
+                    <a
+                      href="https://couriers.deliveryontime.co.zw/login"
+                      target="_blank" rel="noopener noreferrer"
+                      onClick={() => setLoginOpen(false)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '0.65rem',
+                        padding: '0.75rem 1rem', borderRadius: '8px', color: '#fff',
+                        textDecoration: 'none', fontSize: '0.875rem', fontWeight: 600,
+                        transition: 'background 0.15s',
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.07)')}
+                      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                    >
+                      <span style={{ fontSize: '1.1rem' }}>🚴</span>
+                      <div>
+                        <div>Courier Portal</div>
+                        <div style={{ fontSize: '0.72rem', opacity: 0.5, fontWeight: 400 }}>couriers.deliveryontime.co.zw</div>
+                      </div>
+                    </a>
+                    <div style={{ height: '1px', background: 'rgba(255,255,255,0.07)', margin: '0.25rem 0.5rem' }} />
+                    <a
+                      href="https://merchant.deliveryontime.co.zw/login"
+                      target="_blank" rel="noopener noreferrer"
+                      onClick={() => setLoginOpen(false)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '0.65rem',
+                        padding: '0.75rem 1rem', borderRadius: '8px', color: '#fff',
+                        textDecoration: 'none', fontSize: '0.875rem', fontWeight: 600,
+                        transition: 'background 0.15s',
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.07)')}
+                      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                    >
+                      <span style={{ fontSize: '1.1rem' }}>🏪</span>
+                      <div>
+                        <div>Merchant Portal</div>
+                        <div style={{ fontSize: '0.72rem', opacity: 0.5, fontWeight: 400 }}>merchant.deliveryontime.co.zw</div>
+                      </div>
+                    </a>
+                  </div>
+                </>
+              )}
+            </div>
           <button className="btn-primary nav-cta" onClick={() => setMobileNavOpen(false)}>Get The App</button>
         </nav>
       </header>
