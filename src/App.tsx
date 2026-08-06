@@ -148,10 +148,10 @@ function App() {
   const features = [
     { icon: <IconBox />, title: 'Order Anything', desc: 'From meals to groceries. Delivered fast, fresh, and on time right to your door with live GPS tracking.' },
     { icon: <IconMapPin />, title: 'Live Tracking', desc: 'Watch your order move in real-time. Unmatched precision from the store directly to your hands.' },
-    { icon: <IconUsers />, title: 'Flexible Roles', desc: 'Switch seamlessly between Customer, Courier, or Merchant — all in a single, powerful app.' },
+    { icon: <IconUsers />, title: 'Flexible Roles', desc: 'Switch seamlessly between Customer, Courier, or Merchant. All in a single, powerful app.' },
     { icon: <IconShield />, title: 'Secure Payments', desc: 'Industry-standard encryption with multiple payment options. Your money and data, always protected.' },
     { icon: <IconZap />, title: 'Express Delivery', desc: 'Priority couriers, smart routing. We guarantee delivery within 60 minutes or your money back.' },
-    { icon: <IconBarChart />, title: 'Merchant Dashboard', desc: 'Real-time analytics, inventory management, and customer insights — all in one powerful command center.' },
+    { icon: <IconBarChart />, title: 'Merchant Dashboard', desc: 'Real-time analytics, inventory management, and customer insights. All in one powerful command center.' },
   ];
 
   const steps = [
@@ -271,7 +271,7 @@ function App() {
 
             <p className="hero-subtitle hero-anim d3">
               Join the ecosystem built for precision. Whether you're ordering,
-              delivering, or selling — experience reliability with zero compromises.
+              delivering, or selling. Experience reliability with zero compromises.
             </p>
 
             <div className="hero-buttons hero-anim d4">
@@ -279,7 +279,7 @@ function App() {
               <a href="#features" className="btn-outline">Learn More</a>
             </div>
 
-            {/* Stat cards — mobile only (desktop cards live in hero-right) */}
+            {/* Stat cards - mobile only (desktop cards live in hero-right) */}
             <div className="hero-stats-mobile hero-anim d4">
               <div className="hero-stat-card">
                 <span className="hero-stat-icon"><IconClock size={20} /></span>
@@ -397,7 +397,7 @@ function App() {
             <div style={{ textAlign: 'center' }}>
               <span className="section-tag">How It Works</span>
               <h2 className="section-title reveal">Ready in 4 Simple Steps</h2>
-              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>Getting started is instant. No learning curve, no friction — just results.</p>
+              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>Getting started is instant. No learning curve, no friction. Just results.</p>
             </div>
             <div className="steps-grid">
               {steps.map((s, i) => (
@@ -447,7 +447,7 @@ function App() {
                 </button>
               </div>
 
-              {/* Courier — with 3D illustration */}
+              {/* Courier - with 3D illustration */}
               <div className="role-card courier reveal delay-2">
                 <div className="role-illus-center">
                   <img src="/courier.png" alt="Courier character 3D illustration" className="role-illus" />
@@ -464,7 +464,7 @@ function App() {
                 </a>
               </div>
 
-              {/* Merchant — with 3D illustration */}
+              {/* Merchant - with 3D illustration */}
               <div className="role-card merchant reveal delay-3">
                 <div className="role-illus-center">
                   <img src="/merchant-new.png" alt="Merchant dashboard" className="role-illus" />
@@ -513,7 +513,7 @@ function App() {
                 className="footer-logo-img"
               />
               <p className="footer-tagline">
-                The fastest, most reliable delivery platform built for everyone — customers, couriers, and merchants.
+                The fastest, most reliable delivery platform built for everyone: customers, couriers, and merchants.
               </p>
             </div>
             <div>
@@ -559,7 +559,7 @@ function App() {
                 @deli.veryontime
               </a>
               <div className="footer-badge">
-                <IconLive size={8} /> Live — Zero downtime
+                <IconLive size={8} /> Live. Zero downtime
               </div>
             </div>
           </div>
