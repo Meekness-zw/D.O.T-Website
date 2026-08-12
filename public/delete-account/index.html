@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account - dot. by Delivery On Time</title>
+  <meta name="description" content="How to request deletion of your dot. account and associated data." />
+  <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: #F5A623; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
+    .nav-back:hover { color: #F5A623; text-decoration: none; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
+    .lead { font-size: 1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 4rem; max-width: 560px; }
+
+    h2 { font-size: 1rem; font-weight: 800; letter-spacing: -0.2px; color: #fff; margin-bottom: 0.75rem; }
+    p { font-size: 0.92rem; color: rgba(232,230,225,0.58); line-height: 1.8; margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+    ol, ul { padding-left: 1.25rem; font-size: 0.92rem; color: rgba(232,230,225,0.58); line-height: 1.8; margin-bottom: 0.85rem; }
+    li { margin-bottom: 0.3rem; }
+
+    .rule { height: 1px; background: rgba(255,255,255,0.07); margin: 3rem 0; }
+    .section { margin-bottom: 3rem; }
+
+    .step-list { list-style: none; padding: 0; counter-reset: steps; }
+    .step-list li { counter-increment: steps; display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.92rem; color: rgba(232,230,225,0.65); }
+    .step-list li:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .step-list li::before { content: counter(steps); min-width: 24px; height: 24px; border-radius: 50%; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.72rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .data-row { display: flex; gap: 1.5rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; }
+    .data-row:first-of-type { border-top: 1px solid rgba(255,255,255,0.06); }
+    .data-row-label { min-width: 160px; color: rgba(232,230,225,0.85); font-weight: 600; flex-shrink: 0; }
+    .data-row-val { color: rgba(232,230,225,0.45); }
+
+    .email-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.9rem; padding: 0.85rem 1.75rem; border-radius: 10px; text-decoration: none; margin-top: 1.5rem; }
+    .email-btn:hover { background: #D4880D; text-decoration: none; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 1.5rem; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) { .page { padding: 2.5rem 1rem 4rem; } .data-row { flex-direction: column; gap: 0.25rem; } .data-row-label { min-width: auto; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
+    <a href="/" class="nav-back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <div class="page">
+    <div class="eyebrow">Account</div>
+    <h1>Delete your account</h1>
+    <p class="lead">You can request deletion of your dot. account and all associated data at any time. This page explains how to submit a request and what happens to your data when you do.</p>
+
+    <div class="section">
+      <h2>How to request account deletion</h2>
+      <p>Send an email to our support team with the subject line "Delete My Account". We will process your request within 7 business days and confirm by email when complete.</p>
+
+      <ol class="step-list">
+        <li>Open your email app and compose a new message to <strong style="color:rgba(232,230,225,0.85)">contact@deliveryontime.co.zw</strong></li>
+        <li>Use the subject line: <strong style="color:rgba(232,230,225,0.85)">Delete My Account</strong></li>
+        <li>Include the email address or phone number linked to your dot. account</li>
+        <li>We will confirm receipt within 24 hours and complete deletion within 7 business days</li>
+      </ol>
+
+      <a href="mailto:contact@deliveryontime.co.zw?subject=Delete%20My%20Account&body=Please%20delete%20my%20dot.%20account.%0A%0AAccount%20email%20or%20phone%3A%20" class="email-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Send deletion request
+      </a>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>What data is deleted</h2>
+      <p>When your account is deleted, the following data is permanently removed from our systems:</p>
+
+      <div class="data-row"><div class="data-row-label">Profile data</div><div class="data-row-val">Name, email address, phone number, profile photo — deleted immediately</div></div>
+      <div class="data-row"><div class="data-row-label">Location data</div><div class="data-row-val">Saved addresses and live location history — deleted immediately</div></div>
+      <div class="data-row"><div class="data-row-label">Payment methods</div><div class="data-row-val">Saved EcoCash numbers and payment tokens — deleted immediately</div></div>
+      <div class="data-row"><div class="data-row-label">Device tokens</div><div class="data-row-val">Push notification tokens — deleted immediately</div></div>
+      <div class="data-row"><div class="data-row-label">Order history</div><div class="data-row-val">Your name and contact details are removed from past orders. Order records themselves are retained for 5 years as required by Zimbabwean financial regulations.</div></div>
+      <div class="data-row"><div class="data-row-label">Courier earnings records</div><div class="data-row-val">Payout records retained for 5 years for regulatory compliance, with personal identifiers removed where possible.</div></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>What data is retained and why</h2>
+      <p>Some records must be kept after account deletion to comply with Zimbabwean financial and tax laws:</p>
+      <ul>
+        <li>Transaction records (order totals, payment confirmations) — retained for 5 years</li>
+        <li>Payout records for couriers and merchants — retained for 5 years</li>
+        <li>Any records required for an open dispute or legal matter — retained until resolution</li>
+      </ul>
+      <p>These retained records are not used for marketing and are not shared with third parties except as required by law.</p>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>Questions?</h2>
+      <p>Contact our support team at <a href="mailto:contact@deliveryontime.co.zw">contact@deliveryontime.co.zw</a> or call <a href="tel:+263788014717">+263 78 8014717</a>. You can also read our full <a href="/privacy">Privacy Policy</a>.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
