@@ -528,19 +528,19 @@ function App() {
             <div>
               <h4 className="footer-col-title">Company</h4>
               <div className="footer-links">
-                <a href="mailto:contact@deliveryontime.co.zw" className="footer-link">About Us</a>
-                <a href="mailto:contact@deliveryontime.co.zw?subject=Careers" className="footer-link">Careers</a>
-                <a href="mailto:contact@deliveryontime.co.zw?subject=Press" className="footer-link">Press</a>
-                <a href="https://www.instagram.com/deli.veryontime" className="footer-link" target="_blank" rel="noopener noreferrer">Blog</a>
+                <a href="/about" className="footer-link">About Us</a>
+                <a href="/careers" className="footer-link">Careers</a>
+                <a href="/press" className="footer-link">Press</a>
+                <a href="/blog" className="footer-link">Blog</a>
               </div>
             </div>
             <div>
               <h4 className="footer-col-title">Support</h4>
               <div className="footer-links">
-                <a href="mailto:contact@deliveryontime.co.zw?subject=Help" className="footer-link">Help Centre</a>
+                <a href="/help" className="footer-link">Help Centre</a>
                 <a href="mailto:contact@deliveryontime.co.zw" className="footer-link">Contact Us</a>
                 <a href="/privacy" className="footer-link">Privacy Policy</a>
-                <a href="mailto:contact@deliveryontime.co.zw?subject=Terms" className="footer-link">Terms of Service</a>
+                <a href="/terms" className="footer-link">Terms of Service</a>
               </div>
             </div>
           </div>
