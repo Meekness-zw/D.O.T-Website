@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - dot. by Delivery On Time</title>
+  <meta name="description" content="Privacy Policy for the dot. delivery app by Delivery On Time. Learn how we collect, use, and protect your personal information." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: #0D0D0D;
+      color: #E8E6E1;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #F5A623; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0 5vw; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
+    .nav-back {
+      font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55);
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .nav-back:hover { color: #F5A623; text-decoration: none; }
+
+    /* Page layout */
+    .page { max-width: 760px; margin: 0 auto; padding: 4rem 5vw 6rem; }
+
+    /* Header */
+    .page-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .page-tag {
+      display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623;
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em;
+      text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; }
+    .page-meta { font-size: 0.85rem; color: rgba(232,230,225,0.45); }
+    .page-meta span { margin-right: 1.5rem; }
+
+    /* TOC */
+    .toc {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 3rem;
+    }
+    .toc-title { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(232,230,225,0.4); margin-bottom: 0.85rem; }
+    .toc ol { padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+    .toc li { font-size: 0.88rem; }
+    .toc a { color: rgba(232,230,225,0.65); font-weight: 500; }
+    .toc a:hover { color: #F5A623; text-decoration: none; }
+
+    /* Sections */
+    .section { margin-bottom: 2.75rem; scroll-margin-top: 80px; }
+    h2 {
+      font-size: 1.2rem; font-weight: 800; letter-spacing: -0.3px;
+      margin-bottom: 1rem; color: #fff;
+      display: flex; align-items: center; gap: 0.65rem;
+    }
+    h2 .section-num {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(245,166,35,0.12); color: #F5A623;
+      font-size: 0.72rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+    }
+    h3 { font-size: 0.98rem; font-weight: 700; color: rgba(232,230,225,0.85); margin: 1.25rem 0 0.5rem; }
+    p { font-size: 0.92rem; color: rgba(232,230,225,0.68); margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 0.85rem; }
+    li { font-size: 0.92rem; color: rgba(232,230,225,0.68); }
+    li::marker { color: #F5A623; }
+
+    /* Table */
+    .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.87rem; }
+    .data-table th {
+      text-align: left; padding: 0.65rem 1rem;
+      background: rgba(245,166,35,0.08); color: #F5A623;
+      font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(245,166,35,0.15);
+    }
+    .data-table td {
+      padding: 0.7rem 1rem; vertical-align: top;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: rgba(232,230,225,0.68);
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table td:first-child { font-weight: 600; color: rgba(232,230,225,0.85); white-space: nowrap; }
+    .table-wrap { border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; margin: 1rem 0 1.25rem; overflow-x: auto; }
+
+    /* Callout */
+    .callout {
+      background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18);
+      border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.25rem 0;
+      font-size: 0.88rem; color: rgba(232,230,225,0.75); line-height: 1.65;
+    }
+    .callout strong { color: #F5A623; }
+
+    /* Contact card */
+    .contact-card {
+      background: rgba(79,121,66,0.08); border: 1px solid rgba(79,121,66,0.2);
+      border-radius: 14px; padding: 1.5rem 1.75rem; margin-top: 1rem;
+    }
+    .contact-card h3 { color: #4F7942; margin-top: 0; }
+    .contact-row { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.6rem; font-size: 0.9rem; color: rgba(232,230,225,0.75); }
+    .contact-row:last-child { margin-bottom: 0; }
+    .contact-row a { color: #4F7942; font-weight: 600; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 2rem 5vw; text-align: center;
+      font-size: 0.8rem; color: rgba(232,230,225,0.3);
+    }
+    footer a { color: rgba(232,230,225,0.45); }
+
+    @media (max-width: 600px) {
+      .page { padding: 2.5rem 1.25rem 4rem; }
+      nav { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="/dot-on-time-white.png" alt="dot." />
+    </a>
+    <a href="/" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to site
+    </a>
+  </nav>
+
+  <div class="page">
+
+    <div class="page-header">
+      <div class="page-tag">Legal</div>
+      <h1 class="page-title">Privacy Policy</h1>
+      <div class="page-meta">
+        <span>Effective: 12 August 2026</span>
+        <span>Last updated: 12 August 2026</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Summary:</strong> dot. is a delivery platform operated by Delivery On Time (Private) Limited, registered in Zimbabwe. We collect only what we need to run the service, never sell your data, and give you clear controls over your information. Read on for the full details.
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#s1">Who we are</a></li>
+        <li><a href="#s2">Information we collect</a></li>
+        <li><a href="#s3">How we use your information</a></li>
+        <li><a href="#s4">Sharing and disclosure</a></li>
+        <li><a href="#s5">Location data</a></li>
+        <li><a href="#s6">Push notifications</a></li>
+        <li><a href="#s7">Data retention</a></li>
+        <li><a href="#s8">Your rights and choices</a></li>
+        <li><a href="#s9">Children's privacy</a></li>
+        <li><a href="#s10">Security</a></li>
+        <li><a href="#s11">Third-party services</a></li>
+        <li><a href="#s12">Changes to this policy</a></li>
+        <li><a href="#s13">Contact us</a></li>
+      </ol>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="s1">
+      <h2><span class="section-num">1</span> Who we are</h2>
+      <p>dot. is a mobile and web platform operated by <strong>Delivery On Time (Private) Limited</strong> ("we", "our", "us"), a company incorporated in Zimbabwe. Our platform connects customers, couriers, and merchants to facilitate on-demand food and parcel delivery.</p>
+      <p>This Privacy Policy applies to:</p>
+      <ul>
+        <li>The dot. mobile application (Android and iOS)</li>
+        <li>The Merchant Portal at <a href="https://merchant.deliveryontime.co.zw">merchant.deliveryontime.co.zw</a></li>
+        <li>The Courier Portal at <a href="https://couriers.deliveryontime.co.zw">couriers.deliveryontime.co.zw</a></li>
+        <li>The main website at <a href="https://deliveryontime.co.zw">deliveryontime.co.zw</a></li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="section" id="s2">
+      <h2><span class="section-num">2</span> Information we collect</h2>
+      <p>We collect information you provide directly, information generated by your use of the service, and information from third-party sources where permitted.</p>
+
+      <h3>Information you provide</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Category</th><th>What we collect</th><th>Who it applies to</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account</td><td>Phone number, full name, email address (optional), profile photo (optional)</td><td>All users</td></tr>
+            <tr><td>Identity verification</td><td>National ID or passport number, driver's licence, vehicle registration</td><td>Couriers</td></tr>
+            <tr><td>Business details</td><td>Business name, trading address, business registration number, menu or product catalogue</td><td>Merchants</td></tr>
+            <tr><td>Payment</td><td>Mobile money number (EcoCash, Innbucks), bank account details for payouts. Card numbers are processed by our payment processor and never stored by us.</td><td>All users</td></tr>
+            <tr><td>Delivery addresses</td><td>Addresses you save or enter for delivery</td><td>Customers</td></tr>
+            <tr><td>Communications</td><td>Messages you send to support, reviews, and ratings you submit</td><td>All users</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Information generated automatically</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Category</th><th>What we collect</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Location</td><td>GPS coordinates during active deliveries (couriers); delivery address coordinates (customers); store coordinates (merchants). See Section 5 for full details.</td></tr>
+            <tr><td>Device</td><td>Device model, operating system version, app version, unique device identifiers, push notification token</td></tr>
+            <tr><td>Usage</td><td>Features accessed, screens viewed, time stamps, crash reports and error logs</td></tr>
+            <tr><td>Order data</td><td>Items ordered, order value, delivery time, status history</td></tr>
+            <tr><td>Network</td><td>IP address, mobile network operator, connection type</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section" id="s3">
+      <h2><span class="section-num">3</span> How we use your information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li><strong>Provide the service</strong> - create and manage your account, process orders, match couriers to deliveries, calculate routes and ETAs</li>
+        <li><strong>Process payments</strong> - charge customers, disburse payouts to couriers and merchants</li>
+        <li><strong>Verify identity</strong> - confirm courier eligibility, verify merchant business details before going live</li>
+        <li><strong>Communicate with you</strong> - send order updates, delivery confirmations, payout receipts, and support responses via SMS, push notification, or email</li>
+        <li><strong>Improve the platform</strong> - analyse usage patterns, fix bugs, test new features, optimise delivery routing</li>
+        <li><strong>Maintain safety and security</strong> - detect fraud, investigate disputes, enforce our Terms of Service</li>
+        <li><strong>Comply with legal obligations</strong> - respond to lawful requests from authorities, maintain financial records as required by Zimbabwean law</li>
+      </ul>
+      <p>We do not use your data for automated decision-making that has a legal or similarly significant effect on you without human review.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section" id="s4">
+      <h2><span class="section-num">4</span> Sharing and disclosure</h2>
+      <p>We do not sell, rent, or trade your personal information. We share it only in the following circumstances:</p>
+
+      <h3>Within the platform</h3>
+      <p>To complete a delivery, limited information is shared between parties:</p>
+      <ul>
+        <li>Customers see the courier's first name, vehicle type, and live location during an active delivery</li>
+        <li>Couriers see the customer's delivery address and first name, and the merchant's store name and address</li>
+        <li>Merchants see the order contents and a reference number</li>
+      </ul>
+
+      <h3>Service providers</h3>
+      <p>We share data with trusted vendors who help us operate the platform, including payment processors, cloud hosting providers, mapping and routing services, and SMS/push notification services. These providers are contractually required to protect your data and may only use it to perform services on our behalf.</p>
+
+      <h3>Legal requirements</h3>
+      <p>We may disclose your information if required to do so by law, court order, or a request from a government authority in Zimbabwe or elsewhere, or where we believe disclosure is necessary to protect the rights, property, or safety of dot., our users, or the public.</p>
+
+      <h3>Business transfers</h3>
+      <p>If Delivery On Time (Private) Limited is involved in a merger, acquisition, or sale of assets, your personal data may be transferred as part of that transaction. We will notify you before your data is subject to a different privacy policy.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section" id="s5">
+      <h2><span class="section-num">5</span> Location data</h2>
+      <div class="callout">
+        <strong>Important:</strong> Location access is required for core app functions. The app requests "precise location" permission. We do not access your location when the app is in the background unless you are an active courier with an ongoing delivery.
+      </div>
+
+      <h3>Customers</h3>
+      <p>Your location is used to suggest a delivery address and show nearby merchants. You can type your address manually at any time without granting location permission.</p>
+
+      <h3>Couriers</h3>
+      <p>Your GPS coordinates are shared in real time with the customer and our dispatch system during an active delivery. When you are online but not on a delivery, we collect your approximate location to assign nearby orders. Location collection stops when you go offline or close the app.</p>
+
+      <h3>Merchants</h3>
+      <p>Your store's GPS coordinates are used to display your location on the customer map and to calculate delivery distances and fees. This is set once during onboarding and updated only when you change it.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section" id="s6">
+      <h2><span class="section-num">6</span> Push notifications</h2>
+      <p>We send push notifications for order status updates, incoming orders (merchants and couriers), delivery confirmations, and promotional messages (only if you opt in separately).</p>
+      <p>You can disable push notifications at any time in your device's system settings. Turning off notifications will not affect your ability to use the app, but you may miss time-sensitive order updates.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="s7">
+      <h2><span class="section-num">7</span> Data retention</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Data type</th><th>Retention period</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account information</td><td>Retained while your account is active, plus 90 days after deletion request to allow dispute resolution</td></tr>
+            <tr><td>Order history</td><td>5 years, to comply with financial record-keeping obligations</td></tr>
+            <tr><td>Location history</td><td>Courier route data retained for 30 days; aggregated and anonymised thereafter</td></tr>
+            <tr><td>Support communications</td><td>3 years</td></tr>
+            <tr><td>Identity documents (couriers/merchants)</td><td>Retained for the duration of the partnership plus 1 year, or as required by law</td></tr>
+            <tr><td>Device and usage logs</td><td>90 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>After the applicable retention period, data is securely deleted or anonymised.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section" id="s8">
+      <h2><span class="section-num">8</span> Your rights and choices</h2>
+      <p>You have the following rights regarding your personal information. To exercise any of these rights, contact us using the details in Section 13.</p>
+      <ul>
+        <li><strong>Access</strong> - request a copy of the personal data we hold about you</li>
+        <li><strong>Correction</strong> - ask us to correct inaccurate or incomplete information</li>
+        <li><strong>Deletion</strong> - request deletion of your account and associated personal data, subject to legal retention obligations</li>
+        <li><strong>Portability</strong> - request your order history and account data in a machine-readable format</li>
+        <li><strong>Withdraw consent</strong> - withdraw any consent you have given (e.g., marketing messages) without affecting the lawfulness of prior processing</li>
+        <li><strong>Opt out of marketing</strong> - reply STOP to any SMS or use the unsubscribe link in emails</li>
+      </ul>
+      <p>We will respond to all requests within 30 days. In some cases, we may need to verify your identity before fulfilling a request.</p>
+
+      <h3>Deleting your account</h3>
+      <p>You can request account deletion by contacting us at <a href="mailto:contact@deliveryontime.co.zw">contact@deliveryontime.co.zw</a> or via the app's Help section. Upon confirmed deletion, your profile, saved addresses, and identifiable order records will be removed within 90 days, except where retention is required by law.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section" id="s9">
+      <h2><span class="section-num">9</span> Children's privacy</h2>
+      <p>dot. is not intended for use by anyone under the age of 18. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately and we will delete that information promptly.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="s10">
+      <h2><span class="section-num">10</span> Security</h2>
+      <p>We implement industry-standard technical and organisational measures to protect your personal information, including:</p>
+      <ul>
+        <li>Encrypted data transmission (TLS 1.2+) for all API communications</li>
+        <li>Encrypted storage for sensitive fields including identity documents and payment details</li>
+        <li>Role-based access controls limiting data access to authorised personnel only</li>
+        <li>Regular security reviews and vulnerability assessments</li>
+        <li>Incident response procedures with notification obligations</li>
+      </ul>
+      <p>No method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security. If you suspect a security incident involving your account, contact us immediately.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section" id="s11">
+      <h2><span class="section-num">11</span> Third-party services</h2>
+      <p>Our platform integrates with the following categories of third-party services. Each has its own privacy policy governing its use of your data:</p>
+      <ul>
+        <li><strong>Cloud infrastructure</strong> - database hosting and file storage (your data is stored on servers in regions with adequate data protection standards)</li>
+        <li><strong>Mapping and routing</strong> - used to display maps, calculate routes, and show live courier positions</li>
+        <li><strong>Payment processing</strong> - mobile money integrations (EcoCash, Innbucks) and bank transfer providers for processing payments and disbursing payouts</li>
+        <li><strong>Push notifications</strong> - platform notification services (Apple APNs, Google FCM) to deliver in-app and device notifications</li>
+        <li><strong>Analytics</strong> - aggregated, anonymised usage analytics to understand how the app is used and where improvements are needed</li>
+      </ul>
+      <p>We do not share data with advertising networks or data brokers.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section" id="s12">
+      <h2><span class="section-num">12</span> Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you by:</p>
+      <ul>
+        <li>Posting the updated policy on this page with a new "Last updated" date</li>
+        <li>Sending a push notification or in-app notice if the changes significantly affect how we use your data</li>
+      </ul>
+      <p>Your continued use of dot. after the effective date of any changes constitutes your acceptance of the updated policy. If you disagree with the changes, you may delete your account as described in Section 8.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="section" id="s13">
+      <h2><span class="section-num">13</span> Contact us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please contact us:</p>
+      <div class="contact-card">
+        <h3>Delivery On Time (Private) Limited</h3>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:contact@deliveryontime.co.zw">contact@deliveryontime.co.zw</a>
+        </div>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.38 2 2 0 0 1 3.07 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          <a href="tel:+2637880014717">+263 78 8014717</a>
+        </div>
+        <div class="contact-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <a href="https://deliveryontime.co.zw">deliveryontime.co.zw</a>
+        </div>
+        <div class="contact-row" style="margin-top: 0.75rem; font-size: 0.82rem; color: rgba(232,230,225,0.4);">
+          Harare, Zimbabwe
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
