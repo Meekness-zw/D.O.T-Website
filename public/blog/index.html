@@ -15,69 +15,68 @@
     body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
-    .nav-back { font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55); display: flex; align-items: center; gap: 0.4rem; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-    .page { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
-    .page-tag { display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
-    .page-lead { font-size: 1.05rem; color: rgba(232,230,225,0.62); line-height: 1.8; max-width: 600px; margin-bottom: 3.5rem; }
-    .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3rem 0; }
-    h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 1rem; color: #fff; }
-    p { font-size: 0.93rem; color: rgba(232,230,225,0.65); margin-bottom: 0.9rem; line-height: 1.75; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 5rem 6vw 8rem; }
+
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
+    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 4rem; max-width: 580px; }
+
+    p { font-size: 0.95rem; color: rgba(232,230,225,0.6); line-height: 1.8; margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
 
-    .coming-soon-block { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 4rem 2rem; text-align: center; margin: 2rem 0; }
-    .coming-soon-icon { font-size: 3rem; margin-bottom: 1.5rem; }
-    .coming-soon-title { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
-    .coming-soon-text { font-size: 0.9rem; color: rgba(232,230,225,0.45); max-width: 400px; margin: 0 auto 2rem; line-height: 1.7; }
+    .soon-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,230,225,0.25); margin-bottom: 2.5rem; }
 
-    .social-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .social-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: rgba(232,230,225,0.7); font-size: 0.88rem; font-weight: 600; padding: 0.65rem 1.25rem; border-radius: 10px; text-decoration: none; }
-    .social-btn:hover { border-color: rgba(245,166,35,0.35); color: #F5A623; text-decoration: none; }
-    .social-btn svg { flex-shrink: 0; }
+    .social-links { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem; }
+    .social-link { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; font-weight: 600; color: rgba(232,230,225,0.65); text-decoration: none; }
+    .social-link:hover { color: #F5A623; text-decoration: none; }
+    .social-link svg { flex-shrink: 0; opacity: 0.5; }
+    .social-link:hover svg { opacity: 1; }
 
-    footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 5vw; text-align: center; font-size: 0.8rem; color: rgba(232,230,225,0.3); }
-    footer a { color: rgba(232,230,225,0.45); }
-    @media (max-width: 600px) { .page { padding: 2.5rem 1.25rem 4rem; } nav { padding: 0 1.25rem; } .coming-soon-block { padding: 2.5rem 1.25rem; } }
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 6vw; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) { .page { padding: 3rem 1.5rem 5rem; } nav { padding: 0 1.5rem; } }
   </style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
     <a href="/" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to site
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
     </a>
   </nav>
 
   <div class="page">
-    <div class="page-tag">Blog</div>
-    <h1 class="page-title">Stories from <span style="color:#F5A623">dot.</span></h1>
-    <p class="page-lead">Platform updates, courier spotlights, merchant tips, and everything happening at Delivery On Time. Coming soon.</p>
+    <div class="eyebrow">Blog</div>
+    <h1>Stories from dot.</h1>
+    <p class="lead">Platform updates, courier spotlights, merchant tips, and everything happening at Delivery On Time.</p>
 
-    <div class="coming-soon-block">
-      <div class="coming-soon-icon">✍️</div>
-      <div class="coming-soon-title">Blog coming soon</div>
-      <div class="coming-soon-text">We are just getting started. In the meantime, follow us on Instagram for the latest news, updates, and behind-the-scenes from the dot. team.</div>
-      <div class="social-row">
-        <a href="https://www.instagram.com/deli.veryontime" class="social-btn" target="_blank" rel="noopener noreferrer">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          @deli.veryontime
-        </a>
-        <a href="mailto:contact@deliveryontime.co.zw?subject=Newsletter" class="social-btn">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Get notified
-        </a>
-      </div>
+    <div class="soon-label">Coming soon</div>
+
+    <p>We are just getting started. The blog is on its way. In the meantime, follow us on Instagram for the latest news, updates, and behind-the-scenes from the dot. team.</p>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/deli.veryontime" class="social-link" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @deli.veryontime on Instagram
+      </a>
+      <a href="mailto:contact@deliveryontime.co.zw?subject=Newsletter" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get notified when we launch
+      </a>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
-    <p style="margin-top:0.5rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About Us</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
 </body>
 </html>

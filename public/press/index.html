@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Press - dot. by Delivery On Time</title>
-  <meta name="description" content="Media resources, press contact, and brand assets for Delivery On Time and the dot. platform." />
+  <meta name="description" content="Media resources and press contact for Delivery On Time and the dot. platform." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,109 +15,125 @@
     body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
-    .nav-back { font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55); display: flex; align-items: center; gap: 0.4rem; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-    .page { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
-    .page-tag { display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
-    .page-lead { font-size: 1.05rem; color: rgba(232,230,225,0.62); line-height: 1.8; max-width: 640px; margin-bottom: 3.5rem; }
-    .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3rem 0; }
-    h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 1rem; color: #fff; }
-    h3 { font-size: 1rem; font-weight: 700; color: rgba(232,230,225,0.85); margin-bottom: 0.5rem; }
-    p { font-size: 0.93rem; color: rgba(232,230,225,0.65); margin-bottom: 0.9rem; line-height: 1.75; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 5rem 6vw 8rem; }
+
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
+    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 5rem; max-width: 580px; }
+
+    .section { margin-bottom: 4.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 1.25rem; }
+    p { font-size: 0.95rem; color: rgba(232,230,225,0.6); line-height: 1.8; margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
-    .accent { color: #F5A623; }
 
-    .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .fact-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; }
-    .fact-label { font-size: 0.75rem; font-weight: 700; color: rgba(232,230,225,0.4); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem; }
-    .fact-value { font-size: 1rem; font-weight: 700; color: #fff; }
+    .fact-table { width: 100%; margin-top: 1.25rem; border-collapse: collapse; }
+    .fact-table tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .fact-table tr:last-child { border-bottom: none; }
+    .fact-table td { padding: 0.85rem 0; font-size: 0.9rem; vertical-align: top; line-height: 1.6; }
+    .fact-table td:first-child { color: rgba(232,230,225,0.35); font-weight: 600; width: 40%; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; padding-right: 1.5rem; }
+    .fact-table td:last-child { color: rgba(232,230,225,0.8); font-weight: 500; }
 
-    .boilerplate { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.5rem; font-size: 0.88rem; color: rgba(232,230,225,0.6); line-height: 1.75; font-style: italic; margin: 1.5rem 0; }
+    .boilerplate { font-size: 0.9rem; color: rgba(232,230,225,0.5); line-height: 1.8; font-style: italic; margin: 1.25rem 0; padding-left: 1.25rem; border-left: 2px solid rgba(245,166,35,0.35); }
 
-    .contact-card { background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18); border-radius: 16px; padding: 2rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; margin-top: 2rem; }
-    .contact-card h3 { color: #F5A623; margin-bottom: 0.3rem; }
-    .contact-card p { font-size: 0.88rem; margin: 0; }
-    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; white-space: nowrap; }
-    .cta-btn:hover { background: #D4880D; text-decoration: none; }
+    .color-row { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .swatch { display: flex; align-items: center; gap: 0.75rem; }
+    .swatch-dot { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; }
+    .swatch-name { font-size: 0.85rem; font-weight: 700; color: rgba(232,230,225,0.7); }
+    .swatch-hex { font-size: 0.75rem; color: rgba(232,230,225,0.35); }
 
-    .color-row { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.25rem 0; }
-    .color-chip { border-radius: 10px; padding: 0.9rem 1.25rem; min-width: 130px; }
-    .color-chip-name { font-size: 0.85rem; font-weight: 700; }
-    .color-chip-hex { font-size: 0.75rem; opacity: 0.7; margin-top: 0.2rem; }
+    .rule { height: 1px; background: rgba(255,255,255,0.07); margin: 4rem 0; }
 
-    footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 5vw; text-align: center; font-size: 0.8rem; color: rgba(232,230,225,0.3); }
-    footer a { color: rgba(232,230,225,0.45); }
-    @media (max-width: 600px) { .page { padding: 2.5rem 1.25rem 4rem; } nav { padding: 0 1.25rem; } }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; }
+    .contact-info { font-size: 0.9rem; color: rgba(232,230,225,0.5); }
+    .contact-info strong { display: block; font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.88rem; padding: 0.8rem 1.6rem; border-radius: 10px; text-decoration: none; }
+    .btn:hover { background: #D4880D; text-decoration: none; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 6vw; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) { .page { padding: 3rem 1.5rem 5rem; } nav { padding: 0 1.5rem; } }
   </style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
     <a href="/" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to site
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
     </a>
   </nav>
 
   <div class="page">
-    <div class="page-tag">Press</div>
-    <h1 class="page-title">Media <span class="accent">resources.</span></h1>
-    <p class="page-lead">For press inquiries, interview requests, and brand materials, reach out to our team. We are happy to make time for journalists and researchers covering logistics, tech, and economic development in Zimbabwe.</p>
+    <div class="eyebrow">Press</div>
+    <h1>Media resources.</h1>
+    <p class="lead">For press inquiries, interview requests, and brand materials, reach out directly. We are happy to make time for journalists and researchers covering logistics, tech, and economic development in Zimbabwe.</p>
 
-    <div class="divider"></div>
-
-    <h2>Company facts</h2>
-    <div class="fact-grid">
-      <div class="fact-card"><div class="fact-label">Company name</div><div class="fact-value">Delivery On Time (Pvt) Ltd</div></div>
-      <div class="fact-card"><div class="fact-label">Platform name</div><div class="fact-value">dot.</div></div>
-      <div class="fact-card"><div class="fact-label">Founded</div><div class="fact-value">2026, Zimbabwe</div></div>
-      <div class="fact-card"><div class="fact-label">Category</div><div class="fact-value">On-demand logistics</div></div>
-      <div class="fact-card"><div class="fact-label">Platforms</div><div class="fact-value">Android (iOS coming)</div></div>
-      <div class="fact-card"><div class="fact-label">Website</div><div class="fact-value">deliveryontime.co.zw</div></div>
+    <div class="section">
+      <h2>Company facts</h2>
+      <table class="fact-table">
+        <tr><td>Company name</td><td>Delivery On Time (Pvt) Ltd</td></tr>
+        <tr><td>Platform</td><td>dot.</td></tr>
+        <tr><td>Founded</td><td>2026, Zimbabwe</td></tr>
+        <tr><td>Category</td><td>On-demand logistics</td></tr>
+        <tr><td>Platforms</td><td>Android (iOS coming soon)</td></tr>
+        <tr><td>Website</td><td>deliveryontime.co.zw</td></tr>
+        <tr><td>Contact</td><td>contact@deliveryontime.co.zw</td></tr>
+      </table>
     </div>
 
-    <div class="divider"></div>
+    <div class="rule"></div>
 
-    <h2>About dot. (boilerplate)</h2>
-    <div class="boilerplate">
-      "Delivery On Time is a Zimbabwean technology company operating the on-demand logistics platform dot. The platform connects consumers, local merchants, and independent couriers on a single app, enabling same-day delivery across Zimbabwe. dot. is available on Android and designed for the local payment and connectivity environment."
-    </div>
-    <p style="font-size:0.83rem; color:rgba(232,230,225,0.38);">You are welcome to reproduce the boilerplate above in any coverage. For other quotes or statements, please contact us first.</p>
-
-    <div class="divider"></div>
-
-    <h2>Brand colours</h2>
-    <div class="color-row">
-      <div class="color-chip" style="background:#F5A623; color:#000">
-        <div class="color-chip-name">dot. Orange</div>
-        <div class="color-chip-hex">#F5A623</div>
-      </div>
-      <div class="color-chip" style="background:#4F7942; color:#fff">
-        <div class="color-chip-name">dot. Green</div>
-        <div class="color-chip-hex">#4F7942</div>
-      </div>
-      <div class="color-chip" style="background:#0D0D0D; color:#E8E6E1; border: 1px solid rgba(255,255,255,0.12)">
-        <div class="color-chip-name">dot. Black</div>
-        <div class="color-chip-hex">#0D0D0D</div>
-      </div>
+    <div class="section">
+      <h2>Boilerplate</h2>
+      <p>You are welcome to use the description below in any coverage:</p>
+      <p class="boilerplate">"Delivery On Time is a Zimbabwean technology company operating the on-demand logistics platform dot. The platform connects consumers, local merchants, and independent couriers on a single app, enabling same-day delivery across Zimbabwe. dot. is available on Android and designed for the local payment and connectivity environment."</p>
+      <p style="font-size:0.83rem;color:rgba(232,230,225,0.3);">For other quotes or statements, please contact us first.</p>
     </div>
 
-    <div class="contact-card">
-      <div>
-        <h3>Press enquiries</h3>
-        <p>contact@deliveryontime.co.zw &nbsp;·&nbsp; Include "Press" in the subject line.</p>
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>Brand colours</h2>
+      <div class="color-row">
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#F5A623"></div>
+          <div><div class="swatch-name">dot. Orange</div><div class="swatch-hex">#F5A623</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#4F7942"></div>
+          <div><div class="swatch-name">dot. Green</div><div class="swatch-hex">#4F7942</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#0D0D0D; outline: 1px solid rgba(255,255,255,0.12); outline-offset:2px"></div>
+          <div><div class="swatch-name">dot. Black</div><div class="swatch-hex">#0D0D0D</div></div>
+        </div>
       </div>
-      <a href="mailto:contact@deliveryontime.co.zw?subject=Press%20Enquiry" class="cta-btn">Contact press team</a>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>Press contact</h2>
+      <div class="contact-row">
+        <div class="contact-info">
+          <strong>Press team</strong>
+          contact@deliveryontime.co.zw &nbsp;·&nbsp; Include "Press" in the subject line.
+        </div>
+        <a href="mailto:contact@deliveryontime.co.zw?subject=Press%20Enquiry" class="btn">Get in touch</a>
+      </div>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
-    <p style="margin-top:0.5rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About Us</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
 </body>
 </html>

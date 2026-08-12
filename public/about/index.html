@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - dot. by Delivery On Time</title>
-  <meta name="description" content="Learn about Delivery On Time, the company behind dot. — Zimbabwe's on-demand food and parcel delivery platform." />
+  <meta name="description" content="Learn about Delivery On Time, the company behind dot." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,113 +15,127 @@
     body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
-    .nav-back { font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55); display: flex; align-items: center; gap: 0.4rem; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-    .page { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
-    .page-tag { display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
-    .page-lead { font-size: 1.05rem; color: rgba(232,230,225,0.62); line-height: 1.8; max-width: 600px; margin-bottom: 3.5rem; }
-    .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3rem 0; }
-    h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 1rem; color: #fff; }
-    h3 { font-size: 1rem; font-weight: 700; color: rgba(232,230,225,0.85); margin-bottom: 0.5rem; }
-    p { font-size: 0.93rem; color: rgba(232,230,225,0.65); margin-bottom: 0.9rem; line-height: 1.75; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 5rem 6vw 8rem; }
+
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
+    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 5rem; max-width: 580px; }
+
+    .section { margin-bottom: 4.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 1.25rem; }
+    p { font-size: 0.95rem; color: rgba(232,230,225,0.6); line-height: 1.8; margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
-    .accent { color: #F5A623; }
-    .green { color: #4F7942; }
 
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .value-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1.5rem; }
-    .value-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-    .value-title { font-size: 0.95rem; font-weight: 800; margin-bottom: 0.4rem; color: #fff; }
-    .value-desc { font-size: 0.85rem; color: rgba(232,230,225,0.55); line-height: 1.65; }
+    .stat-row { display: flex; gap: 3.5rem; flex-wrap: wrap; margin-bottom: 5rem; }
+    .stat-val { font-size: 2.6rem; font-weight: 900; letter-spacing: -2px; color: #F5A623; line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: rgba(232,230,225,0.35); font-weight: 600; margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
-    .stat-row { display: flex; gap: 2.5rem; flex-wrap: wrap; margin: 2rem 0; }
-    .stat { border-left: 3px solid #F5A623; padding-left: 1.25rem; }
-    .stat-val { font-size: 2rem; font-weight: 900; letter-spacing: -1px; color: #F5A623; line-height: 1; }
-    .stat-label { font-size: 0.8rem; color: rgba(232,230,225,0.45); font-weight: 600; margin-top: 0.25rem; }
+    .values-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 3rem; margin-top: 1.5rem; }
+    .value-title { font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem; }
+    .value-desc { font-size: 0.88rem; color: rgba(232,230,225,0.45); line-height: 1.7; }
 
-    .contact-band { background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18); border-radius: 16px; padding: 2rem; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; }
-    .contact-band-text h3 { color: #F5A623; margin-bottom: 0.3rem; }
-    .contact-band-text p { font-size: 0.88rem; margin: 0; }
-    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; white-space: nowrap; }
-    .cta-btn:hover { background: #D4880D; text-decoration: none; }
+    .rule { height: 1px; background: rgba(255,255,255,0.07); margin: 4rem 0; }
 
-    footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 5vw; text-align: center; font-size: 0.8rem; color: rgba(232,230,225,0.3); }
-    footer a { color: rgba(232,230,225,0.45); }
-    @media (max-width: 600px) { .page { padding: 2.5rem 1.25rem 4rem; } nav { padding: 0 1.25rem; } .stat-row { gap: 1.5rem; } }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
+    .contact-info { font-size: 0.9rem; color: rgba(232,230,225,0.5); }
+    .contact-info strong { display: block; font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.88rem; padding: 0.8rem 1.6rem; border-radius: 10px; text-decoration: none; }
+    .btn:hover { background: #D4880D; text-decoration: none; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 6vw; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) {
+      .page { padding: 3rem 1.5rem 5rem; }
+      nav { padding: 0 1.5rem; }
+      .values-list { grid-template-columns: 1fr; gap: 2rem; }
+      .stat-row { gap: 2rem; }
+    }
   </style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
     <a href="/" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to site
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
     </a>
   </nav>
 
   <div class="page">
-    <div class="page-tag">Company</div>
-    <h1 class="page-title">Delivery that actually <span class="accent">shows up.</span></h1>
-    <p class="page-lead">Delivery On Time is a Zimbabwean technology company building the infrastructure for on-demand delivery. We connect customers who want things fast, merchants who want to grow, and couriers who want to earn, all through one platform called dot.</p>
+    <div class="eyebrow">Company</div>
+    <h1>Delivery that actually shows up.</h1>
+    <p class="lead">Delivery On Time is a Zimbabwean technology company building the infrastructure for on-demand delivery. We connect customers, merchants, and couriers through one platform called dot.</p>
 
     <div class="stat-row">
-      <div class="stat"><div class="stat-val">3</div><div class="stat-label">User types on one platform</div></div>
-      <div class="stat"><div class="stat-val">ZW</div><div class="stat-label">Built in Zimbabwe, for Zimbabwe</div></div>
-      <div class="stat"><div class="stat-val">2026</div><div class="stat-label">Year founded</div></div>
-    </div>
-
-    <div class="divider"></div>
-
-    <h2>Our mission</h2>
-    <p>We exist to make delivery reliable and accessible across Zimbabwe. Whether it is a meal from a local restaurant, a parcel across the city, or a business scaling its reach without the overhead of a fleet, dot. is built to move things on time, every time.</p>
-    <p>We believe the best logistics infrastructure is invisible. It just works. Customers get their orders. Merchants get more sales. Couriers get consistent, fair income. That is the platform we are building.</p>
-
-    <div class="divider"></div>
-
-    <h2>Our values</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon">⚡</div>
-        <div class="value-title">Speed without compromise</div>
-        <div class="value-desc">Fast delivery only counts if the order arrives right. We optimise for both.</div>
+      <div>
+        <div class="stat-val">3</div>
+        <div class="stat-label">Users on one platform</div>
       </div>
-      <div class="value-card">
-        <div class="value-icon">🤝</div>
-        <div class="value-title">Fair for everyone</div>
-        <div class="value-desc">Transparent fees for merchants, fair pay for couriers, honest pricing for customers.</div>
+      <div>
+        <div class="stat-val">ZW</div>
+        <div class="stat-label">Built in Zimbabwe</div>
       </div>
-      <div class="value-card">
-        <div class="value-icon">📍</div>
-        <div class="value-title">Built local</div>
-        <div class="value-desc">Designed specifically for how Zimbabwe moves, pays, and communicates.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🧑‍💻</div>
-        <div class="value-title">Real support</div>
-        <div class="value-desc">Every order has a team behind it. We pick up the phone.</div>
+      <div>
+        <div class="stat-val">2026</div>
+        <div class="stat-label">Year founded</div>
       </div>
     </div>
 
-    <div class="divider"></div>
+    <div class="section">
+      <h2>Our mission</h2>
+      <p>We exist to make delivery reliable and accessible across Zimbabwe. Whether it is a meal from a local restaurant, a parcel across the city, or a business scaling its reach without a fleet, dot. is built to move things on time, every time.</p>
+      <p>We believe the best logistics infrastructure is invisible. It just works. Customers get their orders. Merchants get more sales. Couriers get consistent, fair income. That is the platform we are building.</p>
+    </div>
 
-    <h2>Get in touch</h2>
-    <p>We are a small, focused team. Whether you are a potential partner, a merchant ready to list, or someone who just wants to know more, we would love to hear from you.</p>
-    <div class="contact-band">
-      <div class="contact-band-text">
-        <h3>Say hello</h3>
-        <p>contact@deliveryontime.co.zw &nbsp;·&nbsp; +263 78 8014717</p>
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>What we stand for</h2>
+      <div class="values-list">
+        <div>
+          <div class="value-title">Speed without compromise</div>
+          <div class="value-desc">Fast delivery only counts if the order arrives right. We optimise for both.</div>
+        </div>
+        <div>
+          <div class="value-title">Fair for everyone</div>
+          <div class="value-desc">Transparent fees for merchants, fair pay for couriers, honest pricing for customers.</div>
+        </div>
+        <div>
+          <div class="value-title">Built local</div>
+          <div class="value-desc">Designed specifically for how Zimbabwe moves, pays, and communicates.</div>
+        </div>
+        <div>
+          <div class="value-title">Real support</div>
+          <div class="value-desc">Every order has a team behind it. We pick up the phone.</div>
+        </div>
       </div>
-      <a href="mailto:contact@deliveryontime.co.zw" class="cta-btn">Send us a message</a>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>Get in touch</h2>
+      <p>We are a small, focused team. Whether you are a potential partner, a merchant ready to list, or someone who just wants to know more, we would love to hear from you.</p>
+      <div class="contact-row">
+        <div class="contact-info">
+          <strong>Delivery On Time (Private) Limited</strong>
+          contact@deliveryontime.co.zw &nbsp;·&nbsp; +263 78 8014717
+        </div>
+        <a href="mailto:contact@deliveryontime.co.zw" class="btn">Send a message</a>
+      </div>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
-    <p style="margin-top:0.5rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
 </body>
 </html>

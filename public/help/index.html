@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Help Centre - dot. by Delivery On Time</title>
-  <meta name="description" content="Get answers to common questions about the dot. app, orders, couriers, merchants, and payments." />
+  <meta name="description" content="Get answers to common questions about the dot. app, orders, couriers, and merchants." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,146 +15,135 @@
     body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
-    .nav-back { font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55); display: flex; align-items: center; gap: 0.4rem; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-    .page { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
-    .page-tag { display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
-    .page-lead { font-size: 1.05rem; color: rgba(232,230,225,0.62); line-height: 1.8; max-width: 600px; margin-bottom: 3.5rem; }
-    .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3rem 0; }
-    h2 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 1rem; color: rgba(232,230,225,0.85); padding-top: 0.5rem; }
-    p { font-size: 0.93rem; color: rgba(232,230,225,0.6); margin-bottom: 0.9rem; line-height: 1.75; }
-    p:last-child { margin-bottom: 0; }
 
-    .faq-section-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #F5A623; margin-bottom: 0.75rem; }
-    .faq-group { margin-bottom: 2.5rem; }
+    .page { max-width: 720px; margin: 0 auto; padding: 5rem 6vw 8rem; }
 
-    details { border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; margin-bottom: 0.6rem; overflow: hidden; }
-    details[open] { border-color: rgba(245,166,35,0.2); }
-    summary { list-style: none; padding: 1.1rem 1.5rem; font-size: 0.93rem; font-weight: 600; color: rgba(232,230,225,0.85); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; user-select: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; font-size: 1.2rem; font-weight: 400; color: rgba(232,230,225,0.3); flex-shrink: 0; transition: transform 0.2s; }
-    details[open] summary::after { content: ''; width: 12px; height: 2px; background: rgba(245,166,35,0.6); border-radius: 2px; display: block; }
-    details[open] summary { color: #fff; }
-    .faq-body { padding: 0 1.5rem 1.25rem; font-size: 0.88rem; color: rgba(232,230,225,0.55); line-height: 1.75; }
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
+    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 5rem; max-width: 580px; }
 
-    .contact-band { background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18); border-radius: 16px; padding: 2rem; margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; }
-    .contact-band h3 { font-size: 1rem; font-weight: 800; color: #F5A623; margin-bottom: 0.25rem; }
-    .contact-band p { font-size: 0.87rem; margin: 0; color: rgba(232,230,225,0.55); }
-    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; white-space: nowrap; }
-    .cta-btn:hover { background: #D4880D; text-decoration: none; }
+    .faq-group { margin-bottom: 3.5rem; }
+    .group-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
 
-    footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 5vw; text-align: center; font-size: 0.8rem; color: rgba(232,230,225,0.3); }
-    footer a { color: rgba(232,230,225,0.45); }
-    @media (max-width: 600px) { .page { padding: 2.5rem 1.25rem 4rem; } nav { padding: 0 1.25rem; } summary { padding: 1rem 1.1rem; } .faq-body { padding: 0 1.1rem 1rem; } }
+    .faq-item { padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .faq-item:first-of-type { border-top: 1px solid rgba(255,255,255,0.06); }
+    .faq-q { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.55rem; }
+    .faq-a { font-size: 0.88rem; color: rgba(232,230,225,0.5); line-height: 1.75; }
+
+    .rule { height: 1px; background: rgba(255,255,255,0.07); margin: 4rem 0; }
+
+    .contact-row { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; }
+    .contact-info { font-size: 0.9rem; color: rgba(232,230,225,0.5); }
+    .contact-info strong { display: block; font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F5A623; color: #000; font-weight: 800; font-size: 0.88rem; padding: 0.8rem 1.6rem; border-radius: 10px; text-decoration: none; }
+    .btn:hover { background: #D4880D; text-decoration: none; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 6vw; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) { .page { padding: 3rem 1.5rem 5rem; } nav { padding: 0 1.5rem; } }
   </style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
     <a href="/" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to site
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
     </a>
   </nav>
 
   <div class="page">
-    <div class="page-tag">Help Centre</div>
-    <h1 class="page-title">How can we <span style="color:#F5A623">help?</span></h1>
-    <p class="page-lead">Find answers to common questions below. If you cannot find what you are looking for, our team is always reachable by phone or email.</p>
+    <div class="eyebrow">Help Centre</div>
+    <h1>How can we help?</h1>
+    <p class="lead">Answers to common questions below. If you cannot find what you are looking for, our team is reachable by phone or email.</p>
 
     <div class="faq-group">
-      <div class="faq-section-title">Customers</div>
+      <div class="group-label">Customers</div>
 
-      <details>
-        <summary>How do I place an order?</summary>
-        <div class="faq-body">Download the dot. app, create an account, browse nearby merchants, and add items to your cart. At checkout, confirm your delivery address and pay. Your order goes straight to the merchant.</div>
-      </details>
-
-      <details>
-        <summary>How long does delivery take?</summary>
-        <div class="faq-body">Delivery times vary by distance and merchant preparation time. You can track your order live on the map from the moment a courier picks it up.</div>
-      </details>
-
-      <details>
-        <summary>What payment methods are accepted?</summary>
-        <div class="faq-body">We currently accept EcoCash and cash on delivery, depending on the merchant. More payment options are being added.</div>
-      </details>
-
-      <details>
-        <summary>My order did not arrive. What do I do?</summary>
-        <div class="faq-body">If there is an issue with your order, contact us immediately at <a href="tel:+263788014717">+263 78 8014717</a> or <a href="mailto:contact@deliveryontime.co.zw">contact@deliveryontime.co.zw</a>. We will resolve it promptly.</div>
-      </details>
-
-      <details>
-        <summary>Can I cancel an order?</summary>
-        <div class="faq-body">You can cancel an order before a courier is assigned. Once a courier has accepted and is on the way to collect, cancellation may not be possible. Contact support if you need urgent assistance.</div>
-      </details>
-    </div>
-
-    <div class="faq-group">
-      <div class="faq-section-title">Couriers</div>
-
-      <details>
-        <summary>How do I sign up as a courier?</summary>
-        <div class="faq-body">Download the dot. app or visit <a href="https://courier.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer">courier.deliveryontime.co.zw</a> and complete the signup form. Once approved, you can start accepting deliveries immediately.</div>
-      </details>
-
-      <details>
-        <summary>What do I earn per delivery?</summary>
-        <div class="faq-body">Earnings depend on distance and delivery type. You can see the estimated payout before accepting each order, so there are no surprises.</div>
-      </details>
-
-      <details>
-        <summary>How and when do I get paid?</summary>
-        <div class="faq-body">Payouts are processed to your registered EcoCash number. You can request a payout from the courier portal once your balance reaches the minimum threshold.</div>
-      </details>
-
-      <details>
-        <summary>What do I need to get started?</summary>
-        <div class="faq-body">A smartphone, any mode of transport (bicycle, motorbike, or car), a valid ID, and a dot. account. That is all.</div>
-      </details>
-    </div>
-
-    <div class="faq-group">
-      <div class="faq-section-title">Merchants</div>
-
-      <details>
-        <summary>How do I list my business on dot.?</summary>
-        <div class="faq-body">Sign up at <a href="https://merchant.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer">merchant.deliveryontime.co.zw</a>. Complete your profile, add your menu or product catalogue, set your operating hours, and you can go live within 24 hours.</div>
-      </details>
-
-      <details>
-        <summary>What does it cost to be a merchant?</summary>
-        <div class="faq-body">There is no upfront fee. We charge a small commission on completed orders only. You only pay when you earn.</div>
-      </details>
-
-      <details>
-        <summary>Do I need my own couriers?</summary>
-        <div class="faq-body">No. dot. handles the courier network. When an order comes in, a nearby courier is automatically assigned to collect and deliver it.</div>
-      </details>
-
-      <details>
-        <summary>How do I track my orders and earnings?</summary>
-        <div class="faq-body">The merchant portal gives you a live order queue, delivery tracking, payout history, and analytics. Everything is in one place.</div>
-      </details>
-    </div>
-
-    <div class="contact-band">
-      <div>
-        <h3>Still need help?</h3>
-        <p>Call us on +263 78 8014717 or send an email. We respond fast.</p>
+      <div class="faq-item">
+        <div class="faq-q">How do I place an order?</div>
+        <div class="faq-a">Download the dot. app, create an account, browse nearby merchants, and add items to your cart. At checkout, confirm your delivery address and pay. Your order goes straight to the merchant.</div>
       </div>
-      <a href="mailto:contact@deliveryontime.co.zw?subject=Help%20Request" class="cta-btn">Contact support</a>
+      <div class="faq-item">
+        <div class="faq-q">How long does delivery take?</div>
+        <div class="faq-a">Delivery times vary by distance and merchant preparation time. You can track your order live on the map from the moment a courier picks it up.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What payment methods are accepted?</div>
+        <div class="faq-a">We currently accept EcoCash and cash on delivery, depending on the merchant. More payment options are being added.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">My order did not arrive. What do I do?</div>
+        <div class="faq-a">Contact us immediately at <a href="tel:+263788014717">+263 78 8014717</a> or <a href="mailto:contact@deliveryontime.co.zw">contact@deliveryontime.co.zw</a>. We will resolve it as fast as possible.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I cancel an order?</div>
+        <div class="faq-a">You can cancel before a courier is assigned. Once a courier has accepted and is on the way to collect, cancellation may not be possible. Contact support for urgent help.</div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <div class="group-label">Couriers</div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I sign up as a courier?</div>
+        <div class="faq-a">Visit <a href="https://courier.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer">courier.deliveryontime.co.zw</a> and complete the signup form. Once approved, you can start accepting deliveries immediately.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do I earn per delivery?</div>
+        <div class="faq-a">Earnings depend on distance and delivery type. You can see the estimated payout before accepting each order, so there are no surprises.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How and when do I get paid?</div>
+        <div class="faq-a">Payouts are processed to your registered EcoCash number. You can request a payout from the courier portal once your balance reaches the minimum threshold.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do I need to get started?</div>
+        <div class="faq-a">A smartphone, any mode of transport, a valid ID, and a dot. account. That is all.</div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <div class="group-label">Merchants</div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I list my business on dot.?</div>
+        <div class="faq-a">Sign up at <a href="https://merchant.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer">merchant.deliveryontime.co.zw</a>. Complete your profile, add your catalogue, set operating hours, and go live within 24 hours.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does it cost to be a merchant?</div>
+        <div class="faq-a">No upfront fee. We charge a small commission on completed orders only. You only pay when you earn.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need my own couriers?</div>
+        <div class="faq-a">No. dot. handles the courier network. When an order comes in, a nearby courier is automatically assigned.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I track my orders and earnings?</div>
+        <div class="faq-a">The merchant portal gives you a live order queue, delivery tracking, payout history, and analytics. Everything in one place.</div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="contact-row">
+      <div class="contact-info">
+        <strong>Still need help?</strong>
+        +263 78 8014717 &nbsp;·&nbsp; contact@deliveryontime.co.zw
+      </div>
+      <a href="mailto:contact@deliveryontime.co.zw?subject=Help%20Request" class="btn">Contact support</a>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
-    <p style="margin-top:0.5rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
 </body>
 </html>

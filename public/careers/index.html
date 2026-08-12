@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers - dot. by Delivery On Time</title>
-  <meta name="description" content="Join dot. as a courier, merchant partner, or on the core team. See what opportunities are available at Delivery On Time." />
+  <meta name="description" content="Join dot. as a courier, merchant partner, or on the core team." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,124 +15,123 @@
     body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 34px; filter: brightness(0) invert(1); }
-    .nav-back { font-size: 0.88rem; font-weight: 600; color: rgba(232,230,225,0.55); display: flex; align-items: center; gap: 0.4rem; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 6vw; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-    .page { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
-    .page-tag { display: inline-block; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.10em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1.25rem; }
-    .page-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 1.25rem; }
-    .page-lead { font-size: 1.05rem; color: rgba(232,230,225,0.62); line-height: 1.8; max-width: 640px; margin-bottom: 3.5rem; }
-    .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 3rem 0; }
-    h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 1rem; color: #fff; }
-    h3 { font-size: 1rem; font-weight: 700; color: rgba(232,230,225,0.85); margin-bottom: 0.5rem; }
-    p { font-size: 0.93rem; color: rgba(232,230,225,0.65); margin-bottom: 0.9rem; line-height: 1.75; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 5rem 6vw 8rem; }
+
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
+    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 5rem; max-width: 580px; }
+
+    .section { margin-bottom: 4.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 1.25rem; }
+    h3 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+    p { font-size: 0.95rem; color: rgba(232,230,225,0.6); line-height: 1.8; margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
-    ul { padding-left: 1.4rem; color: rgba(232,230,225,0.65); font-size: 0.93rem; line-height: 1.8; }
-    li { margin-bottom: 0.3rem; }
-    .accent { color: #F5A623; }
-    .green-accent { color: #4F7942; }
+    ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+    li { font-size: 0.9rem; color: rgba(232,230,225,0.5); line-height: 1.75; margin-bottom: 0.2rem; }
 
-    .role-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
-    .role-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem; }
-    .role-card.orange { border-color: rgba(245,166,35,0.25); }
-    .role-card.green { border-color: rgba(79,121,66,0.3); }
-    .role-badge { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 999px; }
-    .badge-orange { background: rgba(245,166,35,0.12); color: #F5A623; }
-    .badge-green { background: rgba(79,121,66,0.15); color: #6aaa5c; }
-    .badge-grey { background: rgba(255,255,255,0.06); color: rgba(232,230,225,0.5); }
-    .role-title { font-size: 1.15rem; font-weight: 800; color: #fff; }
-    .role-desc { font-size: 0.88rem; color: rgba(232,230,225,0.55); line-height: 1.65; }
-    .role-cta { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; margin-top: auto; padding-top: 0.5rem; }
-    .role-cta.orange { color: #F5A623; }
-    .role-cta.green { color: #6aaa5c; }
-    .role-cta.grey { color: rgba(232,230,225,0.45); }
-    .role-cta:hover { text-decoration: underline; }
+    .role-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 1.5rem; }
+    .role-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .label-orange { color: #F5A623; }
+    .label-green { color: #6aaa5c; }
 
-    .open-role { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.25rem 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.75rem; }
-    .open-role-info { }
-    .open-role-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
-    .open-role-meta { font-size: 0.8rem; color: rgba(232,230,225,0.4); }
-    .apply-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(245,166,35,0.10); color: #F5A623; font-size: 0.82rem; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 8px; text-decoration: none; white-space: nowrap; border: 1px solid rgba(245,166,35,0.2); }
-    .apply-btn:hover { background: rgba(245,166,35,0.18); text-decoration: none; }
+    .rule { height: 1px; background: rgba(255,255,255,0.07); margin: 4rem 0; }
 
-    footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 5vw; text-align: center; font-size: 0.8rem; color: rgba(232,230,225,0.3); }
-    footer a { color: rgba(232,230,225,0.45); }
-    @media (max-width: 600px) { .page { padding: 2.5rem 1.25rem 4rem; } nav { padding: 0 1.25rem; } }
+    .open-position { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; }
+    .open-position:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+    .pos-title { font-size: 0.95rem; font-weight: 700; color: #fff; }
+    .pos-meta { font-size: 0.8rem; color: rgba(232,230,225,0.35); margin-top: 0.2rem; }
+    .link-btn { font-size: 0.85rem; font-weight: 700; color: #F5A623; white-space: nowrap; }
+    .link-btn:hover { text-decoration: underline; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 6vw; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) {
+      .page { padding: 3rem 1.5rem 5rem; }
+      nav { padding: 0 1.5rem; }
+      .role-pair { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
   </style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
     <a href="/" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to site
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back
     </a>
   </nav>
 
   <div class="page">
-    <div class="page-tag">Careers</div>
-    <h1 class="page-title">Work that <span class="accent">moves</span> people.</h1>
-    <p class="page-lead">Whether you want to earn as a courier, grow your business as a merchant, or help build the platform itself, there is a place for you at dot.</p>
+    <div class="eyebrow">Careers</div>
+    <h1>Work that moves people.</h1>
+    <p class="lead">Whether you want to earn as a courier, grow your business as a merchant, or help build the platform itself, there is a place for you at dot.</p>
 
-    <div class="role-grid">
-      <div class="role-card orange">
-        <div><span class="role-badge badge-orange">Courier</span></div>
-        <div class="role-title">Deliver with dot.</div>
-        <div class="role-desc">Set your own hours, earn on every delivery, and get paid fast. All you need is a phone and a way to move.</div>
-        <ul style="padding-left:1.2rem; color:rgba(232,230,225,0.55); font-size:0.83rem; margin: 0.25rem 0; line-height:1.7">
-          <li>Flexible schedule, work when you want</li>
-          <li>Transparent per-delivery earnings</li>
-          <li>EcoCash payouts, no delays</li>
-          <li>Support from the dot. team</li>
-        </ul>
-        <a href="https://courier.deliveryontime.co.zw/signup" class="role-cta orange" target="_blank" rel="noopener noreferrer">
-          Sign up as a courier
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-      <div class="role-card green">
-        <div><span class="role-badge badge-green">Merchant</span></div>
-        <div class="role-title">List your business.</div>
-        <div class="role-desc">Put your restaurant, shop, or service in front of more customers. Manage orders, track deliveries, and grow revenue without the hassle.</div>
-        <ul style="padding-left:1.2rem; color:rgba(232,230,225,0.55); font-size:0.83rem; margin: 0.25rem 0; line-height:1.7">
-          <li>Simple onboarding, live within 24 hrs</li>
-          <li>Commission only on completed orders</li>
-          <li>Full merchant portal included</li>
-          <li>Analytics to track what works</li>
-        </ul>
-        <a href="https://merchant.deliveryontime.co.zw/signup" class="role-cta green" target="_blank" rel="noopener noreferrer">
-          Sign up as a merchant
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
+    <div class="section">
+      <h2>Join the network</h2>
+      <p>dot. runs on three groups of people working together. Find your role below.</p>
 
-    <div class="divider"></div>
-
-    <h2>Open positions</h2>
-    <p>We are a small team building big things. When we have specific roles open, they will appear here. Right now the best way to get involved is to drop us a note.</p>
-
-    <div style="margin: 1.5rem 0;">
-      <div class="open-role">
-        <div class="open-role-info">
-          <div class="open-role-title">General Application</div>
-          <div class="open-role-meta">All areas &nbsp;·&nbsp; Harare, Zimbabwe</div>
+      <div class="role-pair">
+        <div>
+          <div class="role-label label-orange">Courier</div>
+          <h3>Deliver with dot.</h3>
+          <p>Set your own hours, earn on every delivery, and get paid fast. All you need is a phone and a way to move.</p>
+          <ul>
+            <li>Flexible schedule</li>
+            <li>Transparent per-delivery earnings</li>
+            <li>EcoCash payouts, no delays</li>
+          </ul>
+          <a href="https://courier.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-size:0.88rem;font-weight:700;color:#F5A623;">
+            Sign up as a courier
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
-        <a href="mailto:contact@deliveryontime.co.zw?subject=Job%20Application" class="apply-btn">
-          Apply now
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <div>
+          <div class="role-label label-green">Merchant</div>
+          <h3>List your business.</h3>
+          <p>Put your restaurant, shop, or service in front of more customers. Manage orders and grow without the hassle.</p>
+          <ul>
+            <li>Live within 24 hours</li>
+            <li>Commission only on completed orders</li>
+            <li>Full merchant portal included</li>
+          </ul>
+          <a href="https://merchant.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-size:0.88rem;font-weight:700;color:#6aaa5c;">
+            Sign up as a merchant
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
-    <p style="font-size:0.85rem; color:rgba(232,230,225,0.38);">Send your CV and a short note about what you would like to work on to <a href="mailto:contact@deliveryontime.co.zw?subject=Job%20Application">contact@deliveryontime.co.zw</a>.</p>
+    <div class="rule"></div>
+
+    <div class="section">
+      <h2>Open positions</h2>
+      <p>We are a small team building big things. When specific roles open, they appear here. The best way to get involved right now is to drop us a note.</p>
+
+      <div style="margin-top:1.75rem">
+        <div class="open-position">
+          <div>
+            <div class="pos-title">General Application</div>
+            <div class="pos-meta">All areas &nbsp;·&nbsp; Harare, Zimbabwe</div>
+          </div>
+          <a href="mailto:contact@deliveryontime.co.zw?subject=Job%20Application" class="link-btn">Apply now →</a>
+        </div>
+      </div>
+
+      <p style="margin-top:1.5rem; font-size:0.85rem; color:rgba(232,230,225,0.3);">Send your CV and a short note to <a href="mailto:contact@deliveryontime.co.zw?subject=Job%20Application">contact@deliveryontime.co.zw</a>.</p>
+    </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
-    <p style="margin-top:0.5rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About Us</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
 </body>
 </html>
