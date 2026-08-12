@@ -1,0 +1,2 @@
+# No SPA catch-all. This site has no client-side routing.
+# Each path is served directly from its own index.html in dist/.

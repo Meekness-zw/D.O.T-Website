@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# No SPA catch-all here — the site has no client-side routing.
+# Netlify serves each path's index.html directly from the dist folder.
+# Static pages in public/ (about, careers, press, blog, help, terms, privacy)
+# are copied to dist/ by Vite and served at their clean URLs automatically.
