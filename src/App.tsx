@@ -519,25 +519,28 @@ function App() {
             <div>
               <h4 className="footer-col-title">Product</h4>
               <div className="footer-links">
-                {['Features', 'How It Works', 'For Merchants', 'Download App'].map(l => (
-                  <a href="#" className="footer-link" key={l}>{l}</a>
-                ))}
+                <a href="#features" className="footer-link">Features</a>
+                <a href="#how" className="footer-link">How It Works</a>
+                <a href="https://merchant.deliveryontime.co.zw" className="footer-link" target="_blank" rel="noopener noreferrer">For Merchants</a>
+                <a href="#download" className="footer-link">Download App</a>
               </div>
             </div>
             <div>
               <h4 className="footer-col-title">Company</h4>
               <div className="footer-links">
-                {['About Us', 'Careers', 'Press', 'Blog'].map(l => (
-                  <a href="#" className="footer-link" key={l}>{l}</a>
-                ))}
+                <a href="mailto:contact@deliveryontime.co.zw" className="footer-link">About Us</a>
+                <a href="mailto:contact@deliveryontime.co.zw?subject=Careers" className="footer-link">Careers</a>
+                <a href="mailto:contact@deliveryontime.co.zw?subject=Press" className="footer-link">Press</a>
+                <a href="https://www.instagram.com/deli.veryontime" className="footer-link" target="_blank" rel="noopener noreferrer">Blog</a>
               </div>
             </div>
             <div>
               <h4 className="footer-col-title">Support</h4>
               <div className="footer-links">
-                {['Help Centre', 'Contact Us', 'Privacy Policy', 'Terms of Service'].map(l => (
-                  <a href="#" className="footer-link" key={l}>{l}</a>
-                ))}
+                <a href="mailto:contact@deliveryontime.co.zw?subject=Help" className="footer-link">Help Centre</a>
+                <a href="mailto:contact@deliveryontime.co.zw" className="footer-link">Contact Us</a>
+                <a href="/privacy" className="footer-link">Privacy Policy</a>
+                <a href="mailto:contact@deliveryontime.co.zw?subject=Terms" className="footer-link">Terms of Service</a>
               </div>
             </div>
           </div>
