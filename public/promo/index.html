@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your discount - dot. by Delivery On Time</title>
+  <meta name="description" content="Your dot. delivery discount code." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: #F5A623; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
+    .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
+    .nav-back:hover { color: #F5A623; text-decoration: none; }
+
+    .page { max-width: 460px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.25rem; text-align: center; }
+
+    /* Headline discount — the number is the whole point of the page. */
+    .amount { font-size: clamp(3rem, 13vw, 4.75rem); font-weight: 900; letter-spacing: -3px; line-height: 1; color: #fff; text-align: center; max-width: 100%; overflow-wrap: anywhere; }
+    .amount-sub { font-size: 1.05rem; font-weight: 700; color: rgba(232,230,225,0.6); text-align: center; margin-top: 0.6rem; }
+
+    /* The code itself, styled as a tear-off coupon stub. */
+    .code-card { position: relative; margin: 2.5rem 0 1rem; padding: 1.75rem 1.25rem; border: 1px dashed rgba(245,166,35,0.45); border-radius: 14px; background: rgba(245,166,35,0.06); text-align: center; }
+    .code-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,230,225,0.4); margin-bottom: 0.6rem; }
+    .code-value { font-family: 'Outfit', system-ui, sans-serif; font-size: clamp(1.5rem, 7vw, 2.1rem); font-weight: 900; letter-spacing: 2px; color: #F5A623; word-break: break-all; }
+
+    .copy-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; background: #F5A623; color: #000; font-family: inherit; font-weight: 800; font-size: 0.95rem; padding: 0.95rem 1.5rem; border: none; border-radius: 10px; cursor: pointer; margin-top: 1rem; transition: background 0.15s ease; }
+    .copy-btn:hover { background: #D4880D; }
+    .copy-btn.done { background: rgba(245,166,35,0.15); color: #F5A623; }
+
+    .meta { margin-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .meta-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; }
+    .meta-label { color: rgba(232,230,225,0.45); }
+    .meta-val { color: rgba(232,230,225,0.85); font-weight: 600; text-align: right; }
+
+    .steps { list-style: none; padding: 0; counter-reset: steps; margin-top: 2.5rem; }
+    .steps li { counter-increment: steps; display: flex; gap: 1rem; align-items: flex-start; padding: 0.8rem 0; font-size: 0.88rem; color: rgba(232,230,225,0.6); }
+    .steps li::before { content: counter(steps); min-width: 22px; height: 22px; border-radius: 50%; background: rgba(245,166,35,0.12); color: #F5A623; font-size: 0.68rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.15rem; }
+
+    .fineprint { margin-top: 2rem; font-size: 0.78rem; color: rgba(232,230,225,0.3); line-height: 1.7; text-align: center; }
+
+    /* Shared empty/expired/error state. */
+    .state { text-align: center; padding: 3rem 0; }
+    .state-icon { width: 56px; height: 56px; margin: 0 auto 1.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: rgba(232,230,225,0.35); }
+    .state h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 0.6rem; }
+    .state p { font-size: 0.92rem; color: rgba(232,230,225,0.5); max-width: 320px; margin: 0 auto; }
+    .state .email-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.06); color: #E8E6E1; font-weight: 700; font-size: 0.88rem; padding: 0.75rem 1.5rem; border-radius: 10px; margin-top: 1.75rem; }
+    .state .email-btn:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
+
+    /* Loading shimmer, so a cold Render start doesn't look like a broken page. */
+    .skeleton { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
+    .sk-bar { height: 14px; border-radius: 7px; background: rgba(255,255,255,0.08); margin: 0 auto 1rem; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 1.5rem; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
+    footer a { color: rgba(232,230,225,0.38); }
+
+    @media (max-width: 600px) { .page { padding: 2.5rem 1rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
+    <a href="/" class="nav-back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Home
+    </a>
+  </nav>
+
+  <div class="page" id="page">
+    <div class="state skeleton">
+      <div class="sk-bar" style="width:120px"></div>
+      <div class="sk-bar" style="width:220px;height:44px"></div>
+      <div class="sk-bar" style="width:180px"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    var API = 'https://d-o-t-backend.onrender.com';
+    var page = document.getElementById('page');
+
+    // The QR encodes /promo/<CODE>; ?c=<CODE> is kept as a fallback for any
+    // link shortener or scanner that mangles the trailing path segment.
+    function readCode() {
+      var fromQuery = new URLSearchParams(location.search).get('c');
+      if (fromQuery) return fromQuery.trim();
+      var parts = location.pathname.split('/').filter(Boolean);
+      var last = parts[parts.length - 1] || '';
+      return last.toLowerCase() === 'promo' ? '' : decodeURIComponent(last).trim();
+    }
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    function formatDiscount(d) {
+      return d.discountType === 'percent'
+        ? Math.round(d.value) + '%'
+        : '$' + Number(d.value).toFixed(2);
+    }
+
+    function formatExpiry(iso) {
+      if (!iso) return 'No expiry';
+      var date = new Date(iso);
+      if (isNaN(date)) return 'No expiry';
+      return date.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    var ICON_SAD = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>';
+
+    function renderState(title, body) {
+      page.innerHTML =
+        '<div class="state">' +
+          '<div class="state-icon">' + ICON_SAD + '</div>' +
+          '<h1>' + esc(title) + '</h1>' +
+          '<p>' + esc(body) + '</p>' +
+          '<a href="/" class="email-btn">Go to deliveryontime.co.zw</a>' +
+        '</div>';
+    }
+
+    function renderCode(d) {
+      page.innerHTML =
+        '<div class="eyebrow">Your discount</div>' +
+        '<div class="amount">' + esc(formatDiscount(d)) + '</div>' +
+        '<div class="amount-sub">off your delivery fee</div>' +
+        '<div class="code-card">' +
+          '<div class="code-label">Use this code at checkout</div>' +
+          '<div class="code-value" id="code">' + esc(d.code) + '</div>' +
+        '</div>' +
+        '<button class="copy-btn" id="copy" type="button">Copy code</button>' +
+        '<div class="meta">' +
+          '<div class="meta-row"><span class="meta-label">Discount</span><span class="meta-val">' +
+            esc(formatDiscount(d)) + ' off delivery' + '</span></div>' +
+          '<div class="meta-row"><span class="meta-label">Valid until</span><span class="meta-val">' +
+            esc(formatExpiry(d.expiresAt)) + '</span></div>' +
+          '<div class="meta-row"><span class="meta-label">Uses per account</span><span class="meta-val">' +
+            (d.perCustomer === 1 ? 'Once' : esc(String(d.perCustomer)) + ' times') + '</span></div>' +
+        '</div>' +
+        '<ol class="steps">' +
+          '<li>Open the dot. app and build your order as normal.</li>' +
+          '<li>At checkout, enter the code above in the promo code field.</li>' +
+          '<li>Your delivery fee drops before you pay.</li>' +
+        '</ol>' +
+        '<p class="fineprint">This code applies to the delivery fee only and can be used once per account. ' +
+          'While stocks last — once every use is claimed, the code stops working.</p>';
+
+      var btn = document.getElementById('copy');
+      btn.addEventListener('click', function () {
+        var text = d.code;
+        var done = function () {
+          btn.textContent = 'Copied';
+          btn.classList.add('done');
+          setTimeout(function () { btn.textContent = 'Copy code'; btn.classList.remove('done'); }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+        // execCommand path for older mobile browsers and non-secure contexts,
+        // where navigator.clipboard is undefined or rejects.
+        function fallbackCopy() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) { /* leave the code visible to copy by hand */ }
+          document.body.removeChild(ta);
+        }
+      });
+    }
+
+    var code = readCode();
+    if (!code) {
+      renderState('No code in this link', 'This page needs a discount code in the link. Scan the QR code again, or check the link you were given.');
+    } else {
+      fetch(API + '/discount-codes/' + encodeURIComponent(code) + '/public', { cache: 'no-store' })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (body) {
+            return { status: res.status, body: body };
+          });
+        })
+        .then(function (r) {
+          if (r.status === 200 && r.body && r.body.code) return renderCode(r.body);
+          if (r.status === 404) {
+            return renderState('Code not found', "We couldn't find this discount code. Check the link, or scan the QR code again.");
+          }
+          if (r.status === 410) {
+            if (r.body.reason === 'expired') {
+              return renderState('This offer has ended', 'This discount code has passed its expiry date. Keep an eye out — we run new offers often.');
+            }
+            return renderState('All claimed', 'Every use of this discount code has been taken. Keep an eye out — we run new offers often.');
+          }
+          if (r.status === 429) {
+            return renderState('Too many requests', 'Give it a moment and refresh this page.');
+          }
+          return renderState('Something went wrong', "We couldn't load this discount right now. Please refresh and try again.");
+        })
+        .catch(function () {
+          renderState('Something went wrong', "We couldn't reach our servers. Check your connection and refresh.");
+        });
+    }
+  </script>
+</body>
+</html>
