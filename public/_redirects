@@ -1,8 +1,2 @@
 # No SPA catch-all. This site has no client-side routing.
 # Each path is served directly from its own index.html in dist/.
-
-# Exception: promo QR landing pages. The QR on an influencer's poster encodes
-# /promo/<CODE>, and there is no file per code — one page reads the code off
-# the path and looks it up. 200 rewrites (not 301) so the URL the scanner sees
-# keeps the code in it.
-/promo/*  /promo/index.html  200

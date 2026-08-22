@@ -93,10 +93,12 @@
     var API = 'https://d-o-t-backend.onrender.com';
     var page = document.getElementById('page');
 
-    // The QR encodes /promo/<CODE>; ?c=<CODE> is kept as a fallback for any
-    // link shortener or scanner that mangles the trailing path segment.
+    // The QR encodes /promo/<CODE>. Vercel's rewrite also passes the segment
+    // through as ?code=, and ?c= is kept as a fallback for any link shortener
+    // or scanner that mangles the trailing path segment.
     function readCode() {
-      var fromQuery = new URLSearchParams(location.search).get('c');
+      var q = new URLSearchParams(location.search);
+      var fromQuery = q.get('code') || q.get('c');
       if (fromQuery) return fromQuery.trim();
       var parts = location.pathname.split('/').filter(Boolean);
       var last = parts[parts.length - 1] || '';
