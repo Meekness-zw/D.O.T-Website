@@ -4,5 +4,10 @@
 
 # No SPA catch-all here — the site has no client-side routing.
 # Netlify serves each path's index.html directly from the dist folder.
-# Static pages in public/ (about, careers, press, blog, help, terms, privacy)
-# are copied to dist/ by Vite and served at their clean URLs automatically.
+# Static pages in public/ are copied to dist/ by Vite and served at clean URLs automatically.
+
+# Promo QR code URLs — rewrite /promo/<code> to the promo page (SPA-style)
+[[redirects]]
+  from = "/promo/*"
+  to = "/promo/index.html"
+  status = 200

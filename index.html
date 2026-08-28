@@ -34,9 +34,9 @@
     <meta property="og:site_name"   content="dot. Delivery on Time" />
     <meta property="og:title"       content="dot. | Food & Parcel Delivery App in Zimbabwe" />
     <meta property="og:description" content="Order food, groceries, and parcels online in Zimbabwe. Fast delivery, live GPS tracking, EcoCash & card payments. Available in Harare and Bulawayo." />
-    <meta property="og:image"       content="https://deliveryontime.co.zw/og-image.png" />
-    <meta property="og:image:width"  content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image"       content="https://deliveryontime.co.zw/dot-icon.png" />
+    <meta property="og:image:width"  content="1024" />
+    <meta property="og:image:height" content="1024" />
     <meta property="og:locale"      content="en_ZW" />
     <meta property="og:see_also"    content="https://www.instagram.com/deli.veryontime" />
 
@@ -44,7 +44,7 @@
     <meta name="twitter:card"        content="summary_large_image" />
     <meta name="twitter:title"       content="dot. | Food & Parcel Delivery App in Zimbabwe" />
     <meta name="twitter:description" content="Order food, groceries, and parcels online in Zimbabwe. Fast delivery, EcoCash & card payments accepted." />
-    <meta name="twitter:image"       content="https://deliveryontime.co.zw/og-image.png" />
+    <meta name="twitter:image"       content="https://deliveryontime.co.zw/dot-icon.png" />
 
     <!-- ── Instagram profile link ──────────────────────────────── -->
     <link rel="me" href="https://www.instagram.com/deli.veryontime" />
@@ -103,7 +103,61 @@
     </script>
 
     <!-- ── Favicon ──────────────────────────────────────────────── -->
-    <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- ── Local Business Schema ──────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "dot. Delivery on Time",
+      "alternateName": "Delivery On Time",
+      "description": "Zimbabwe's on-demand delivery app. Order food, groceries, and parcels in Harare and Bulawayo with live GPS tracking.",
+      "url": "https://deliveryontime.co.zw",
+      "logo": "https://deliveryontime.co.zw/dot-on-time-white.png",
+      "image": "https://deliveryontime.co.zw/dot-on-time-white.png",
+      "telephone": "+263788014717",
+      "email": "contact@deliveryontime.co.zw",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Harare",
+        "addressCountry": "ZW"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Harare", "addressCountry": "ZW" },
+        { "@type": "City", "name": "Bulawayo", "addressCountry": "ZW" }
+      ],
+      "openingHours": "Mo-Su 07:00-22:00",
+      "priceRange": "$",
+      "sameAs": [
+        "https://www.instagram.com/deli.veryontime"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Delivery Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Food Delivery", "url": "https://deliveryontime.co.zw/food-delivery" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parcel Delivery", "url": "https://deliveryontime.co.zw/parcel-delivery" } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- ── FAQ Schema ─────────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Which areas does dot. deliver in?", "acceptedAnswer": { "@type": "Answer", "text": "dot. currently serves Harare and Bulawayo, with more Zimbabwean cities coming soon." } },
+        { "@type": "Question", "name": "What payment methods are accepted?", "acceptedAnswer": { "@type": "Answer", "text": "dot. supports EcoCash, cash on delivery, and additional payment options." } },
+        { "@type": "Question", "name": "How long does delivery take?", "acceptedAnswer": { "@type": "Answer", "text": "Most deliveries are completed within 20–45 minutes. You can track every order live on the map." } },
+        { "@type": "Question", "name": "Is there a minimum order amount?", "acceptedAnswer": { "@type": "Answer", "text": "No minimum order. Delivery fees are calculated based on distance from the merchant." } },
+        { "@type": "Question", "name": "How do I become a courier on dot.?", "acceptedAnswer": { "@type": "Answer", "text": "Sign up at couriers.deliveryontime.co.zw. You need a smartphone, any mode of transport, and a valid ID." } }
+      ]
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

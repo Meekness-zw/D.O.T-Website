@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers - dot. by Delivery On Time</title>
   <meta name="description" content="Join dot. as a courier, merchant partner, or on the core team." />
-  <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="canonical" href="https://deliveryontime.co.zw/careers" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -57,6 +58,9 @@
       nav { padding: 0 1.5rem; }
       .role-pair { grid-template-columns: 1fr; gap: 2.5rem; }
     }
+    .breadcrumb { font-size: 0.78rem; color: rgba(232,230,225,0.3); padding: 1rem 1.5rem; max-width: 720px; margin: 0 auto; }
+    .breadcrumb a { color: rgba(232,230,225,0.45); }
+    .breadcrumb a:hover { color: #F5A623; }
   </style>
 </head>
 <body>
@@ -67,6 +71,8 @@
       Back
     </a>
   </nav>
+
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Careers</div>
 
   <div class="page">
     <div class="eyebrow">Careers</div>
@@ -87,7 +93,7 @@
             <li>Transparent per-delivery earnings</li>
             <li>EcoCash payouts, no delays</li>
           </ul>
-          <a href="https://courier.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-size:0.88rem;font-weight:700;color:#F5A623;">
+          <a href="https://couriers.deliveryontime.co.zw/signup" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-size:0.88rem;font-weight:700;color:#F5A623;">
             Sign up as a courier
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -130,8 +136,9 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
+    <p>&copy; <span class="yr">2026</span> Delivery On Time (Private) Limited.</p>
     <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
 </body>
 </html>

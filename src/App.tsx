@@ -165,7 +165,7 @@ function App() {
     <div className="app-container">
       {/* ── HEADER ─────────────────────────────────────── */}
       <header ref={headerRef} className={mobileNavOpen ? 'nav-open' : ''}>
-        <a href="#" className="logo-img-wrap" aria-label="dot. – Delivery on Time">
+        <a href="/" className="logo-img-wrap" aria-label="dot. – Delivery on Time">
           <img src="/dot-on-time-white.png" alt="dot. Delivery on Time" className="nav-logo-img" />
         </a>
         <button
@@ -249,7 +249,7 @@ function App() {
                 </>
               )}
             </div>
-          <button className="btn-primary nav-cta" onClick={() => setMobileNavOpen(false)}>Get The App</button>
+          <a href="#download" className="btn-primary nav-cta" onClick={() => setMobileNavOpen(false)}>Get The App</a>
         </nav>
       </header>
 
@@ -260,7 +260,7 @@ function App() {
           <div className="hero-left">
             <div className="hero-eyebrow hero-anim d1">
               <span className="hero-eyebrow-dot" />
-              Coming in August
+              Now Live in Zimbabwe
             </div>
 
             <h1 className="hero-title hero-anim d2">
@@ -270,8 +270,10 @@ function App() {
             </h1>
 
             <p className="hero-subtitle hero-anim d3">
-              Join the ecosystem built for precision. Whether you're ordering,
-              delivering, or selling. Experience reliability with zero compromises.
+              Zimbabwe's fastest delivery platform for <a href="/food-delivery" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>food</a>,{' '}
+              groceries, and <a href="/parcel-delivery" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>parcels</a>.
+              Serving <a href="/harare" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Harare</a> and{' '}
+              <a href="/bulawayo" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Bulawayo</a> with live GPS tracking and zero compromise on speed.
             </p>
 
             <div className="hero-buttons hero-anim d4">
@@ -298,18 +300,18 @@ function App() {
             </div>
 
             <div id="download" className="hero-store-badges hero-anim d4">
-              <a href="#" className="store-badge">
-                <IconApple size={22} />
-                <div className="store-badge-text">
-                  <span className="store-badge-sub">Download on the</span>
-                  <span className="store-badge-name">App Store</span>
-                </div>
-              </a>
-              <a href="#" className="store-badge">
+              <a href="https://play.google.com/store/apps/details?id=co.zw.deliveryontime" className="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Download dot. on Google Play">
                 <IconAndroid size={22} />
                 <div className="store-badge-text">
                   <span className="store-badge-sub">GET IT ON</span>
                   <span className="store-badge-name">Google Play</span>
+                </div>
+              </a>
+              <a href="#download" className="store-badge" aria-label="dot. coming soon to iOS App Store" style={{ opacity: 0.5, cursor: 'default' }} onClick={(e) => e.preventDefault()}>
+                <IconApple size={22} />
+                <div className="store-badge-text">
+                  <span className="store-badge-sub">Coming soon to</span>
+                  <span className="store-badge-name">App Store</span>
                 </div>
               </a>
             </div>
@@ -335,7 +337,7 @@ function App() {
           {/* Right: hero image + floating stat cards */}
           <div className="hero-right">
             <div className="hero-img-fade" />
-            <img src="/Hero.jpeg" alt="dot. delivery" className="hero-bg-img" />
+            <img src="/Hero.jpeg" alt="Food delivery courier on a motorbike in Harare, Zimbabwe" className="hero-bg-img" />
             <div className="hero-stat-cards">
               <div className="hero-stat-card hero-anim d2">
                 <span className="hero-stat-icon"><IconClock size={20} /></span>
@@ -373,7 +375,7 @@ function App() {
                 <h2 className="section-title">Built For Speed.<br />Designed For You.</h2>
                 <p className="section-subtitle">A seamless platform supporting customers, couriers, and merchants through one intuitive app.</p>
                 <div className="features-illus-wrap">
-                  <img src="/tracking.png" alt="Live tracking 3D illustration" className="features-illus float-slow" />
+                  <img src="/tracking.png" alt="dot. live GPS delivery tracking map for Zimbabwe" className="features-illus float-slow" />
                 </div>
               </div>
 
@@ -417,6 +419,62 @@ function App() {
 
 
 
+        {/* ── FAQ ────────────────────────────────────────── */}
+        <section className="faq-section" id="faq">
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <span className="section-tag">Common Questions</span>
+              <h2 className="section-title reveal">Frequently Asked Questions</h2>
+              <p className="section-subtitle reveal delay-1" style={{ margin: '0 auto' }}>Everything you need to know about dot. delivery in Zimbabwe.</p>
+            </div>
+            <div className="faq-grid">
+              {[
+                { q: 'Which areas does dot. deliver in?', a: 'We currently serve Harare and Bulawayo, with more Zimbabwean cities coming soon. Within covered areas, dot. delivers to homes, offices, and public locations.' },
+                { q: 'What payment methods are accepted?', a: 'dot. supports EcoCash, cash on delivery, and additional payment options. We\'re continuously adding more to make ordering as seamless as possible.' },
+                { q: 'How long does delivery take?', a: 'Most deliveries in Harare and Bulawayo are completed within 20–45 minutes. Exact delivery times vary by distance and restaurant preparation time, and you can track every order live on the map.' },
+                { q: 'Is there a minimum order amount?', a: 'No minimum order. You can order as little or as much as you like. Delivery fees are calculated based on your distance from the merchant.' },
+                { q: 'How do I become a courier on dot.?', a: 'Sign up at couriers.deliveryontime.co.zw. All you need is a smartphone, any mode of transport, and a valid ID. You set your own hours and earn per delivery.' },
+                { q: 'How do I list my restaurant or shop on dot.?', a: 'Register your business at merchant.deliveryontime.co.zw. There are no upfront fees — we charge a small commission on completed orders only. Your store can be live within 24 hours.' },
+              ].map((item, i) => (
+                <div key={i} className={`faq-item reveal delay-${(i % 3) + 1}`}>
+                  <h3 className="faq-q">{item.q}</h3>
+                  <p className="faq-a">{item.a}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <a href="/help" className="btn-outline">See full Help Centre <IconArrowRight size={16} /></a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── REVIEWS ─────────────────────────────────────── */}
+        <section className="reviews-section">
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <span className="section-tag">Testimonials</span>
+              <h2 className="section-title reveal">What People Are Saying</h2>
+            </div>
+            <div className="reviews-grid">
+              <div className="review-card reveal delay-1">
+                <div className="review-stars">{'★★★★★'}</div>
+                <p className="review-body">"The fastest delivery I've experienced in Harare. My order arrived in under 25 minutes and everything was still hot. I won't go back to calling restaurants directly."</p>
+                <div className="review-author"><span className="review-name">Tinashe M.</span><span className="review-loc">Borrowdale, Harare</span></div>
+              </div>
+              <div className="review-card reveal delay-2">
+                <div className="review-stars">{'★★★★★'}</div>
+                <p className="review-body">"As a courier on dot., I set my own hours and earn consistently every week. The payout process is simple and reliable — the money is there when they say it will be."</p>
+                <div className="review-author"><span className="review-name">Kudakwashe N.</span><span className="review-loc">Courier, Harare</span></div>
+              </div>
+              <div className="review-card reveal delay-3">
+                <div className="review-stars">{'★★★★★'}</div>
+                <p className="review-body">"Since listing our restaurant on dot., we've seen a significant jump in orders. The merchant dashboard gives us everything we need to manage deliveries and see what's selling."</p>
+                <div className="review-author"><span className="review-name">Rudo C.</span><span className="review-loc">Restaurant Owner, Bulawayo</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── ROLES / JOIN US ────────────────────────────── */}
         <section id="roles" className="roles-section">
           <div className="container">
@@ -430,7 +488,7 @@ function App() {
               {/* Customer */}
               <div className="role-card customer reveal delay-1">
                 <div className="role-illus-center">
-                  <img src="/customer.png" alt="Customer illustration" className="role-illus" />
+                  <img src="/customer.png" alt="Customer ordering food on the dot. app in Zimbabwe" className="role-illus" />
                 </div>
                 <div className="role-icon-wrap">
                   <IconShoppingCart size={28} />
@@ -442,42 +500,38 @@ function App() {
                     <li key={p}><span className="perk-check"><IconCheck /></span>{p}</li>
                   ))}
                 </ul>
-                <button className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}>
+                <a href="#download" className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                   Start Ordering <IconArrowRight />
-                </button>
+                </a>
               </div>
 
               {/* Courier - with 3D illustration */}
               <div className="role-card courier reveal delay-2">
                 <div className="role-illus-center">
-                  <img src="/courier.png" alt="Courier character 3D illustration" className="role-illus" />
+                  <img src="/courier.png" alt="dot. courier delivering an order in Harare, Zimbabwe" className="role-illus" />
                 </div>
                 <div className="role-icon-wrap">
                   <IconTruck size={28} />
                 </div>
                 <h3 className="role-title">Couriers</h3>
                 <p className="role-desc">Earn on your own schedule. Set your hours, choose your zone, and get paid fast for every delivery.</p>
-                <a href="https://couriers.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
-                  <button className="btn-outline" style={{ width: '100%', justifyContent: 'center' }}>
-                    Become a Courier <IconArrowRight />
-                  </button>
+                <a href="https://couriers.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Become a Courier <IconArrowRight />
                 </a>
               </div>
 
               {/* Merchant - with 3D illustration */}
               <div className="role-card merchant reveal delay-3">
                 <div className="role-illus-center">
-                  <img src="/merchant-new.png" alt="Merchant dashboard" className="role-illus" />
+                  <img src="/merchant-new.png" alt="dot. merchant dashboard for Zimbabwean restaurants and stores" className="role-illus" />
                 </div>
                 <div className="role-icon-wrap">
                   <IconStore size={28} />
                 </div>
                 <h3 className="role-title">Merchants</h3>
                 <p className="role-desc">Reach more customers and grow your revenue. Access your full merchant dashboard online.</p>
-                <a href="https://merchant.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" style={{ width: '100%', marginTop: 'auto' }}>
-                  <button className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                    Open Merchant Dashboard <IconArrowRight />
-                  </button>
+                <a href="https://merchant.deliveryontime.co.zw" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: 'auto', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Open Merchant Dashboard <IconArrowRight />
                 </a>
               </div>
             </div>
@@ -495,8 +549,16 @@ function App() {
                 delivery <span className="c-green">on your terms?</span>
               </h2>
               <p className="cta-subtitle reveal delay-1">
-                Download the app for free and join 50,000+ happy customers who've already made the switch.
+                Download the app for free and start ordering from restaurants, shops, and stores across Zimbabwe today.
               </p>
+              <div className="cta-buttons reveal delay-2">
+                <a href="https://play.google.com/store/apps/details?id=co.zw.deliveryontime" target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+                  <IconAndroid size={18} /> Download Free on Android
+                </a>
+                <a href="/help" className="btn-cta-outline">
+                  Have questions? <IconArrowRight size={16} />
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -517,11 +579,12 @@ function App() {
               </p>
             </div>
             <div>
-              <h4 className="footer-col-title">Product</h4>
+              <h4 className="footer-col-title">Services</h4>
               <div className="footer-links">
-                <a href="#features" className="footer-link">Features</a>
-                <a href="#how" className="footer-link">How It Works</a>
+                <a href="/food-delivery" className="footer-link">Food Delivery</a>
+                <a href="/parcel-delivery" className="footer-link">Parcel Delivery</a>
                 <a href="https://merchant.deliveryontime.co.zw" className="footer-link" target="_blank" rel="noopener noreferrer">For Merchants</a>
+                <a href="https://couriers.deliveryontime.co.zw" className="footer-link" target="_blank" rel="noopener noreferrer">Become a Courier</a>
                 <a href="#download" className="footer-link">Download App</a>
               </div>
             </div>
@@ -538,6 +601,7 @@ function App() {
               <h4 className="footer-col-title">Support</h4>
               <div className="footer-links">
                 <a href="/help" className="footer-link">Help Centre</a>
+                <a href="tel:+263788014717" className="footer-link">+263 78 8014717</a>
                 <a href="mailto:contact@deliveryontime.co.zw" className="footer-link">Contact Us</a>
                 <a href="/privacy" className="footer-link">Privacy Policy</a>
                 <a href="/terms" className="footer-link">Terms of Service</a>

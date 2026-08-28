@@ -3,80 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog - dot. by Delivery On Time</title>
-  <meta name="description" content="News, updates, and stories from Delivery On Time and the dot. platform." />
-  <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+  <title>Blog — dot. | Delivery On Time Zimbabwe</title>
+  <meta name="description" content="Guides, tips, and updates from the dot. team. Learn how food delivery works in Zimbabwe, how to become a courier, and more." />
+  <link rel="canonical" href="https://deliveryontime.co.zw/blog" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:title" content="Blog — dot. Delivery On Time Zimbabwe" />
+  <meta property="og:description" content="Guides and updates from the dot. team in Zimbabwe." />
+  <meta property="og:url" content="https://deliveryontime.co.zw/blog" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://deliveryontime.co.zw/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://deliveryontime.co.zw/blog" }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Outfit', system-ui, sans-serif; background: #0D0D0D; color: #E8E6E1; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
     nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo img { height: 32px; filter: brightness(0) invert(1); display: block; }
     .nav-back { font-size: 0.85rem; font-weight: 600; color: rgba(232,230,225,0.45); display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: #F5A623; text-decoration: none; }
-
-    .page { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
-
-    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.5rem; }
-    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.75rem; }
-    .lead { font-size: 1.1rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 4rem; max-width: 580px; }
-
-    p { font-size: 0.95rem; color: rgba(232,230,225,0.6); line-height: 1.8; margin-bottom: 1rem; }
-    p:last-child { margin-bottom: 0; }
-
-    .soon-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,230,225,0.25); margin-bottom: 2.5rem; }
-
-    .social-links { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem; }
-    .social-link { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; font-weight: 600; color: rgba(232,230,225,0.65); text-decoration: none; }
+    .breadcrumb { font-size: 0.78rem; color: rgba(232,230,225,0.3); padding: 1rem 1.5rem; max-width: 720px; margin: 0 auto; }
+    .breadcrumb a { color: rgba(232,230,225,0.45); }
+    .breadcrumb a:hover { color: #F5A623; }
+    .page { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #F5A623; margin-bottom: 1.25rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.25rem; }
+    .lead { font-size: 1.05rem; color: rgba(232,230,225,0.55); line-height: 1.85; margin-bottom: 3rem; max-width: 560px; }
+    .posts { display: flex; flex-direction: column; gap: 0; }
+    .post-item { padding: 1.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .post-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+    .post-meta { display: flex; gap: 0.9rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .post-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #F5A623; background: rgba(245,166,35,0.1); padding: 0.2rem 0.55rem; border-radius: 4px; }
+    .post-date { font-size: 0.78rem; color: rgba(232,230,225,0.3); }
+    .post-title { font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 0.5rem; display: block; }
+    .post-title:hover { color: #F5A623; text-decoration: none; }
+    .post-desc { font-size: 0.88rem; color: rgba(232,230,225,0.48); line-height: 1.75; margin-bottom: 0.85rem; }
+    .read-link { font-size: 0.82rem; font-weight: 700; color: #F5A623; display: inline-flex; align-items: center; gap: 0.3rem; }
+    .read-link svg { transition: transform 0.15s; }
+    .read-link:hover svg { transform: translateX(3px); }
+    .read-link:hover { text-decoration: none; }
+    .social-section { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .social-section p { font-size: 0.9rem; color: rgba(232,230,225,0.45); margin-bottom: 1.25rem; }
+    .social-link { display: inline-flex; align-items: center; gap: 0.65rem; font-size: 0.9rem; font-weight: 600; color: rgba(232,230,225,0.55); }
     .social-link:hover { color: #F5A623; text-decoration: none; }
     .social-link svg { flex-shrink: 0; opacity: 0.5; }
     .social-link:hover svg { opacity: 1; }
-
     footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 1.5rem; text-align: center; font-size: 0.78rem; color: rgba(232,230,225,0.25); }
     footer a { color: rgba(232,230,225,0.38); }
-
-    @media (max-width: 600px) { .page { padding: 3rem 1.5rem 5rem; } nav { padding: 0 1.5rem; } }
+    @media (max-width: 600px) { .page { padding: 2rem 1rem 4rem; } }
   </style>
 </head>
 <body>
   <nav>
-    <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot." /></a>
+    <a href="/" class="nav-logo"><img src="/dot-on-time-white.png" alt="dot. — Delivery on Time" /></a>
     <a href="/" class="nav-back">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       Back
     </a>
   </nav>
 
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Blog</div>
+
   <div class="page">
     <div class="eyebrow">Blog</div>
     <h1>Stories from dot.</h1>
-    <p class="lead">Platform updates, courier spotlights, merchant tips, and everything happening at Delivery On Time.</p>
+    <p class="lead">Guides, courier spotlights, and updates from the dot. team — helping you get more from delivery in Zimbabwe.</p>
 
-    <div class="soon-label">Coming soon</div>
+    <div class="posts">
 
-    <p>We are just getting started. The blog is on its way. In the meantime, follow us on Instagram for the latest news, updates, and behind-the-scenes from the dot. team.</p>
+      <div class="post-item">
+        <div class="post-meta">
+          <span class="post-tag">Guide</span>
+          <span class="post-date">27 August 2026</span>
+        </div>
+        <a href="/blog/food-delivery-harare-guide" class="post-title">Food Delivery in Harare: The Complete Guide</a>
+        <p class="post-desc">Everything you need to know about ordering food online in Harare. How it works, delivery times by suburb, payment options, what to order, and tips for the best experience.</p>
+        <a href="/blog/food-delivery-harare-guide" class="read-link">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
 
-    <div class="social-links">
+      <div class="post-item">
+        <div class="post-meta">
+          <span class="post-tag">Couriers</span>
+          <span class="post-date">27 August 2026</span>
+        </div>
+        <a href="/blog/how-to-become-a-courier-in-zimbabwe" class="post-title">How to Become a Courier in Zimbabwe: What You Need to Know</a>
+        <p class="post-desc">A step-by-step guide to joining dot. as a courier. Learn what you need to get started, how much you can earn, how to sign up, and what to expect on your first day.</p>
+        <a href="/blog/how-to-become-a-courier-in-zimbabwe" class="read-link">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+    </div>
+
+    <div class="social-section">
+      <p>Follow us for the latest news and updates from the dot. team.</p>
       <a href="https://www.instagram.com/deli.veryontime" class="social-link" target="_blank" rel="noopener noreferrer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         @deli.veryontime on Instagram
-      </a>
-      <a href="mailto:contact@deliveryontime.co.zw?subject=Newsletter" class="social-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Get notified when we launch
       </a>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited.</p>
-    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
+    <p>&copy; <span class="yr">2026</span> Delivery On Time (Private) Limited.</p>
+    <p style="margin-top:0.4rem"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/about">About</a> &nbsp;&middot;&nbsp; <a href="/careers">Careers</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
   </footer>
+  <script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
 </body>
 </html>

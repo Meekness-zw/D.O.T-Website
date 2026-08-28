@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - dot. by Delivery On Time</title>
   <meta name="description" content="Privacy Policy for the dot. delivery app by Delivery On Time. Learn how we collect, use, and protect your personal information." />
-  <link rel="icon" type="image/png" href="/dot-on-time-white.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="canonical" href="https://deliveryontime.co.zw/privacy" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'Outfit', system-ui, sans-serif;
       background: #0D0D0D;
       color: #E8E6E1;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     a { color: #F5A623; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -126,6 +128,9 @@
       .page { padding: 2.5rem 1rem 4rem; }
       nav { padding: 0 1.25rem; }
     }
+    .breadcrumb { font-size: 0.78rem; color: rgba(232,230,225,0.3); padding: 1rem 1.5rem; max-width: 720px; margin: 0 auto; }
+    .breadcrumb a { color: rgba(232,230,225,0.45); }
+    .breadcrumb a:hover { color: #F5A623; }
   </style>
 </head>
 <body>
@@ -139,6 +144,8 @@
       Back to site
     </a>
   </nav>
+
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Privacy Policy</div>
 
   <div class="page">
 
@@ -385,7 +392,7 @@
         </div>
         <div class="contact-row">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.38 2 2 0 0 1 3.07 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
-          <a href="tel:+2637880014717">+263 78 8014717</a>
+          <a href="tel:+263788014717">+263 78 8014717</a>
         </div>
         <div class="contact-row">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -400,9 +407,10 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Delivery On Time (Private) Limited. All rights reserved.</p>
+    <p>&copy; <span class="yr">2026</span> Delivery On Time (Private) Limited. All rights reserved.</p>
     <p style="margin-top: 0.5rem;"><a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></p>
   </footer>
 
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
 </body>
 </html>
